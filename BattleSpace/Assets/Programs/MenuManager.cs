@@ -52,6 +52,7 @@ public class MenuManager : MonoBehaviour {
                 break;
         }
     }
+
     IEnumerator StartGame() {
         // fade out the screen and then switch scenes
         float fadeTime = gameObject.GetComponent<Fading>().BeginFade(1);

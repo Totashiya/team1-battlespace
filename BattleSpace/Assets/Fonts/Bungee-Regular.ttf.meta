@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: e074b5dbe9530443fa18762ea10cb8f1
-timeCreated: 1469002322
+guid: b9d3ab8042eca477bb5e3f0f45a76870
+timeCreated: 1469506376
 licenseType: Free
 TrueTypeFontImporter:
   serializedVersion: 4
@@ -10,7 +10,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Abel
+  - Bungee
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
