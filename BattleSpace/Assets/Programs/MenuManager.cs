@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour {
@@ -12,8 +13,7 @@ public class MenuManager : MonoBehaviour {
     public void sendMessage(string message) {
         switch(message) {
             case "play":
-
-                SceneManager.LoadScene("Main", LoadSceneMode.Single);
+                StartCoroutine(StartGame());
                 break;
 
             case "about":
@@ -47,5 +47,12 @@ public class MenuManager : MonoBehaviour {
                 Application.Quit();
                 break;
         }
-    }    
+    }
+    IEnumerator StartGame() {
+        // fade out the screen and then switch scenes
+        float fadeTime = gameObject.GetComponent<Fading>().BeginFade(1);
+        yield return new WaitForSeconds(fadeTime);
+
+        SceneManager.LoadScene("Main", LoadSceneMode.Single);
+    }  
 }
