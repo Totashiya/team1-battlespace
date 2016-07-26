@@ -16,8 +16,10 @@ public class MenuManager : MonoBehaviour {
                 StartCoroutine(StartGame());
                 break;
 
-            case "about":
+			case "about":
+				credits_isEnabled = false;
                 creditsPanel.SetActive(false);
+
                 if (about_isEnabled) {
                     about_isEnabled = false;
                     aboutPanel.SetActive(false);
@@ -31,8 +33,10 @@ public class MenuManager : MonoBehaviour {
 
                 break;
 
-            case "credits":
+			case "credits":
+				about_isEnabled = false;
                 aboutPanel.SetActive(false);
+
                 if (credits_isEnabled) {
                     credits_isEnabled = false;
                     creditsPanel.SetActive(false);
