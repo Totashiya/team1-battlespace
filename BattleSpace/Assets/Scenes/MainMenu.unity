@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.16132933, g: 0.15086812, b: 0.15692133, a: 1}
+  m_IndirectSpecularColor: {r: 0.16136274, g: 0.15073314, b: 0.15697438, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -263,8 +263,8 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.8411031, y: 0.85947675}
-  m_AnchoredPosition: {x: 190.65106, y: -18.345032}
-  m_SizeDelta: {x: 728.88904, y: 429.00006}
+  m_AnchoredPosition: {x: 212, y: -18.345032}
+  m_SizeDelta: {x: 680, y: 429}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &309660463
 MonoBehaviour:
@@ -419,7 +419,7 @@ Prefab:
     - target: {fileID: 224000012931228608, guid: f9275dea095b6e649b592b266e44484a,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 753
+      value: 738
       objectReference: {fileID: 0}
     - target: {fileID: 114000012772647690, guid: f9275dea095b6e649b592b266e44484a,
         type: 2}
@@ -919,6 +919,11 @@ Prefab:
       propertyPath: m_Colors.m_HighlightedColor.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 224000012931228608, guid: f9275dea095b6e649b592b266e44484a,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -54
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f9275dea095b6e649b592b266e44484a, type: 2}
   m_IsPrefabParent: 0
@@ -962,8 +967,8 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -14, y: 18.4}
-  m_SizeDelta: {x: 664, y: 344.3}
+  m_AnchoredPosition: {x: -4.5, y: 18.4}
+  m_SizeDelta: {x: 639, y: 344}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &361908377
 MonoBehaviour:
@@ -1109,7 +1114,7 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 333, y: 18.625}
+  m_AnchoredPosition: {x: 319, y: 18.625}
   m_SizeDelta: {x: 11, y: 344.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &460918174
@@ -1150,8 +1155,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1559871976}
   m_HandleRect: {fileID: 1559871975}
   m_Direction: 2
-  m_Value: 0.99999994
-  m_Size: 0.089375176
+  m_Value: 1
+  m_Size: 0.08930425
   m_NumberOfSteps: 1
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1258,13 +1263,17 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0.8
-  m_Text: "Copyright (c) 2009-2011 by Accademia di Belle Arti di Urbino and students
-    of MA course of Visual design. Some rights reserved.\r\nThis Font Software is
-    licensed under the SIL Open Font License, Version 1.1.\n\nCopyright 2008 The Bungee
-    Project Authors (david@djr.com)\r\nThis Font Software is licensed under the SIL
-    Open Font License, Version 1.1.\r\nThis license is copied below, and is also available
-    with a FAQ at:\r\nhttp://scripts.sil.org/OFL\r\n\r\nMusic\n\n<i>Quiescent In Time</i>
-    by Shane Ivers - https://www.silvermansound.com\n\n-----------------------------------------------------------\r\n\nSIL
+  m_Text: "<b>Developers</b>\nChristine Chen\nMeghan Guo\nJason Ouyang\n\n<b>Skybox
+    Textures</b>\nImage 1: <i>Wide Field Imager view of a Milky Way look-alike, NGC
+    6744</i> - ESO (eso.org)\nImage 2: <i>Hiding in Plain Sight \u2014 the elusive
+    Carina Dwarf Galaxy</i> - ESO/G. Bono & CTIO (eso.org)\n\n<b>Fonts</b>\n\n<i>Titillium
+    Web Regular</i> - Copyright (c) 2009-2011 by Accademia di Belle Arti di Urbino
+    and students of MA course of Visual design. Some rights reserved.\r\nThis Font
+    Software is licensed under the SIL Open Font License, Version 1.1.\n\n<i>Bungee
+    Inline, Shade and Regular</i> - Copyright 2008 The Bungee Project Authors (david@djr.com)\r\nThis
+    Font Software is licensed under the SIL Open Font License, Version 1.1.\r\nThis
+    license is copied below, and is also available with a FAQ at:\r\nhttp://scripts.sil.org/OFL\r\n\r\n<b>Music</b>\n\n<i>Quiescent
+    In Time</i> by Shane Ivers - https://www.silvermansound.com\n\n-----------------------------------------------------------\r\n\nSIL
     OPEN FONT LICENSE Version 1.1 - 26 February 2007\r\n\nPREAMBLE\r\nThe goals of
     the Open Font License (OFL) are to stimulate worldwide\r\ndevelopment of collaborative
     font projects, to support the font creation\r\nefforts of academic and linguistic
@@ -1466,7 +1475,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 321, y: -64}
+  m_AnchoredPosition: {x: 296, y: -64}
   m_SizeDelta: {x: 48, y: 280}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1167554313
@@ -1599,8 +1608,8 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -46, y: 0}
-  m_SizeDelta: {x: 570, y: 388}
+  m_AnchoredPosition: {x: -37, y: 0}
+  m_SizeDelta: {x: 552, y: 388}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1326618103
 MonoBehaviour:
@@ -1623,7 +1632,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 7a1fa3352934843019382e9e68c32aad, type: 3}
-    m_FontSize: 28
+    m_FontSize: 24
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 2
@@ -1720,8 +1729,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.8411031, y: 0.85947675}
-  m_AnchoredPosition: {x: 190.65106, y: -18.345032}
-  m_SizeDelta: {x: 728.88904, y: 429.00006}
+  m_AnchoredPosition: {x: 214, y: -18.345032}
+  m_SizeDelta: {x: 680, y: 429}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1478630069
 MonoBehaviour:
@@ -1856,7 +1865,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 270, y: -186}
+  m_AnchoredPosition: {x: 247, y: -186}
   m_SizeDelta: {x: 367, y: 48}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1657494733
