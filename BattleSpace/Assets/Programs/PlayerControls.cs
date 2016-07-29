@@ -16,8 +16,7 @@ public class PlayerControls : MonoBehaviour {
 	private float m_YawInputValue;
 /*	private float m_RollInputValue;
 	private float m_PitchInputValue;
-*/	private float m_HorizontalForce;
-	private float m_VerticalForce;
+*/
 
 	private void Awake()
 	{
@@ -32,8 +31,7 @@ public class PlayerControls : MonoBehaviour {
 		m_YawInputValue = 0f;
 /*		m_RollInputValue = 0f;
 		m_PitchInputValue = 0f;
-*/		m_HorizontalForce = 0f;
-		m_VerticalForce = 0f;
+*/		
 	}
 
 
