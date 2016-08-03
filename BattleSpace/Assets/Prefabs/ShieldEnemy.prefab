@@ -43,6 +43,7 @@ GameObject:
   - 23: {fileID: 2346128}
   - 54: {fileID: 5456286}
   - 114: {fileID: 11488098}
+  - 114: {fileID: 11404802}
   m_Layer: 0
   m_Name: Enemy Hit Zero
   m_TagString: Untagged
@@ -151,6 +152,24 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &11404802
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 186984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bef198b289f524d4b8381b8e7967d4c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Player: {fileID: 5403420, guid: 1c85748afb8a2164fa09bc033cbbe330, type: 2}
+  scalefactor: 10
+  m_ShieldNumber: 0
+  m_TotalShielders: 0
+  m_FireSignal: 0
+  m_Self: {fileID: 5456286}
+  m_Instance: {fileID: 0}
 --- !u!114 &11488098
 MonoBehaviour:
   m_ObjectHideFlags: 1

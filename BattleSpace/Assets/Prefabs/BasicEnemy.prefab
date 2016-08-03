@@ -13,6 +13,7 @@ GameObject:
   - 23: {fileID: 2334024}
   - 54: {fileID: 5484516}
   - 114: {fileID: 11423216}
+  - 114: {fileID: 11443610}
   m_Layer: 0
   m_Name: Enemy Hit Zero
   m_TagString: Untagged
@@ -163,6 +164,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   self: {fileID: 139490}
+--- !u!114 &11443610
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 139490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87ea2ab882743da4f8fb985e34cb7811, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

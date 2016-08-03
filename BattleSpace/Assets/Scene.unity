@@ -373,13 +373,13 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 11425768, guid: 1c85748afb8a2164fa09bc033cbbe330, type: 2}
-      propertyPath: m_PlayerNumber
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1c85748afb8a2164fa09bc033cbbe330, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &785518511 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 404284, guid: 1c85748afb8a2164fa09bc033cbbe330, type: 2}
+  m_PrefabInternal: {fileID: 785518510}
 --- !u!1 &805115749
 GameObject:
   m_ObjectHideFlags: 0
@@ -484,6 +484,34 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1137621191}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1241057007
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1241057008}
+  m_Layer: 0
+  m_Name: TacticalTransform6
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1241057008
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1241057007}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1267117251}
+  m_RootOrder: 5
 --- !u!1 &1267117249
 GameObject:
   m_ObjectHideFlags: 0
@@ -511,15 +539,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 809e592fadc720348b80aaecce87b42d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerTransform: {fileID: 0}
-  Transform1: {fileID: 0}
-  Transform2: {fileID: 0}
-  Transform3: {fileID: 0}
-  Transform4: {fileID: 0}
-  Transform5: {fileID: 0}
-  ShieldEnemy: {fileID: 0}
-  BasicEnemy: {fileID: 0}
-  AdvancedEnemy: {fileID: 0}
+  OriginalSpawn: {fileID: 1914177160}
+  PlayerTransform: {fileID: 785518511}
+  Transform1: {fileID: 235869179}
+  Transform2: {fileID: 1365460736}
+  Transform3: {fileID: 805115750}
+  Transform4: {fileID: 527689984}
+  Transform5: {fileID: 1368511574}
+  Transform6: {fileID: 1241057008}
+  Transform7: {fileID: 2095532767}
+  Transform8: {fileID: 1962285007}
+  AdvancedEnemy: {fileID: 165754, guid: 8a867bb75d0cf5b4daa05de0d5b0e704, type: 2}
+  ShieldEnemy: {fileID: 186984, guid: af7f634afc47f944791907ebc734bdb0, type: 2}
+  BasicEnemy: {fileID: 139490, guid: a1d31db4db2866547a87d1dd84e75ea1, type: 2}
+  spawndebugger: 1
+  Flankers:
+  - {fileID: 11489450, guid: 8a867bb75d0cf5b4daa05de0d5b0e704, type: 2}
+  Shielders: []
+  Basics: []
 --- !u!4 &1267117251
 Transform:
   m_ObjectHideFlags: 0
@@ -536,6 +573,9 @@ Transform:
   - {fileID: 805115750}
   - {fileID: 527689984}
   - {fileID: 1368511574}
+  - {fileID: 1241057008}
+  - {fileID: 2095532767}
+  - {fileID: 1962285007}
   m_Father: {fileID: 0}
   m_RootOrder: 4
 --- !u!1 &1365460735
@@ -594,6 +634,52 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1267117251}
   m_RootOrder: 4
+--- !u!1001 &1624076302
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 472646, guid: 8a867bb75d0cf5b4daa05de0d5b0e704, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 472646, guid: 8a867bb75d0cf5b4daa05de0d5b0e704, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 472646, guid: 8a867bb75d0cf5b4daa05de0d5b0e704, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 472646, guid: 8a867bb75d0cf5b4daa05de0d5b0e704, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 472646, guid: 8a867bb75d0cf5b4daa05de0d5b0e704, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 472646, guid: 8a867bb75d0cf5b4daa05de0d5b0e704, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 472646, guid: 8a867bb75d0cf5b4daa05de0d5b0e704, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 472646, guid: 8a867bb75d0cf5b4daa05de0d5b0e704, type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11489450, guid: 8a867bb75d0cf5b4daa05de0d5b0e704, type: 2}
+      propertyPath: m_Instance
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 8a867bb75d0cf5b4daa05de0d5b0e704, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1631063305
 GameObject:
   m_ObjectHideFlags: 0
@@ -670,3 +756,59 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
+--- !u!1 &1962285006
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1962285007}
+  m_Layer: 0
+  m_Name: TacticalTransform8
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1962285007
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1962285006}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1267117251}
+  m_RootOrder: 7
+--- !u!1 &2095532766
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2095532767}
+  m_Layer: 0
+  m_Name: TacticalTransform7
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2095532767
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2095532766}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1267117251}
+  m_RootOrder: 6
