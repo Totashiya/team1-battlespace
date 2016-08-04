@@ -27,10 +27,11 @@ public class BasicManager: MonoBehaviour{
 	void Update () {
 		if (Time.time >= m_TotalFireTime) {
 			m_FireFlag = true;
+			m_TotalFireTime = Time.time + m_FireRate;
 		}
 		if (m_FireFlag == true) {
 			Rigidbody shellInstance = Instantiate (m_Shell, m_FireTransform.position, m_FireTransform.rotation) as Rigidbody;
-			shellInstance.velocity = m_CurrentLaunchForce * -m_FireTransform.up;
+			shellInstance.velocity = m_CurrentLaunchForce * m_FireTransform.up;
 			m_FireFlag = false;
 		}
 	}

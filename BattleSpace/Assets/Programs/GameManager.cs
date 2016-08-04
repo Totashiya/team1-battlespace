@@ -3,7 +3,7 @@ using System.Collections;
 
 public class GameManager : MonoBehaviour {
 
-	public int m_SpawnRate;
+	public float m_SpawnRate;
 	public int m_InitialSpawn;
 	public Transform OriginalSpawn;
 	public Rigidbody Enemy;
@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour {
 		}
 	}
 	private void CreateEnemy(){
-		Vector3 Compensation = new Vector3 (Random.Range(-10f,10f),0f,0f);
+		Vector3 Compensation = new Vector3 (Random.Range(-20f,20f),0f,0f);
 		Vector3 CreatedEnemy = OriginalSpawn.position + Compensation;
 		GameObject CreatEnemy = Instantiate(Enemy,CreatedEnemy, OriginalSpawn.rotation) as GameObject;
 	}
