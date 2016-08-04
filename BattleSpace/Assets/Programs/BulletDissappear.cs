@@ -22,6 +22,7 @@ public class BulletDissappear : MonoBehaviour {
 		if (DestroyFlag == true) {
 			Destroy (m_Rigidbody);
 		}
+
 	}
 
 

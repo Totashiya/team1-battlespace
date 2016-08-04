@@ -7,7 +7,9 @@ public class GameManager : MonoBehaviour {
 	public int m_InitialSpawn;
 	public Transform OriginalSpawn;
 	public Rigidbody Enemy;
+	public Rigidbody Player;
 	public Transform TacticalReturn;
+	public Transform PlayerSpawn;
 
 	public int scale;
 	public int starter;
@@ -17,11 +19,11 @@ public class GameManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
+		GameObject m_Player = Instantiate (Player, PlayerSpawn.position, PlayerSpawn.rotation) as GameObject;
 
-
-		for (int i = 0; i < m_InitialSpawn; i++){
-			CreateEnemy(i-m_InitialSpawn/2);
-		}
+		//for (int i = 0; i < m_InitialSpawn; i++){
+		//	CreateEnemy(i-m_InitialSpawn/2);
+		//}
 		target = Time.time + m_SpawnRate;
 	}
 	
@@ -32,8 +34,8 @@ public class GameManager : MonoBehaviour {
 			target = Time.time + m_SpawnRate;
 		}
 	}
-	private void CreateEnemy(float horizontaloffset = 0f){
-		Vector3 Compensation = new Vector3 (horizontaloffset*5, 0f, 0f);
+	private void CreateEnemy(){
+		Vector3 Compensation = new Vector3 (Random.Range(-10f,10f),0f,0f);
 		Vector3 CreatedEnemy = OriginalSpawn.position + Compensation;
 		GameObject CreatEnemy = Instantiate(Enemy,CreatedEnemy, OriginalSpawn.rotation) as GameObject;
 	}

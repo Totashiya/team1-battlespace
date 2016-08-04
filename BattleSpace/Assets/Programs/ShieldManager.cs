@@ -243,7 +243,7 @@ public class ShieldManager : MonoBehaviour {
 		}
 		m_prevShieldNumber = m_TotalShielders;
 		m_relativelocation = new Vector3 (m_Player.position.x + m_ylocation*scalefactor,0f,m_Player.position.z + m_xlocation*scalefactor);
-		m_Self.MovePosition (m_Self.position + m_relativelocation);
+		m_Self.MovePosition (m_relativelocation);
 		m_Self.Sleep ();
 
 	}

@@ -28,7 +28,7 @@ GameObject:
   - 23: {fileID: 2375400}
   - 54: {fileID: 5443040}
   - 114: {fileID: 11423856}
-  - 114: {fileID: 11489450}
+  - 114: {fileID: 11487740}
   m_Layer: 0
   m_Name: Enemy Hit Zero
   m_TagString: Untagged
@@ -38,7 +38,7 @@ GameObject:
   m_IsActive: 1
 --- !u!1 &168258
 GameObject:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
@@ -58,12 +58,12 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 168258}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 2}
+  m_LocalPosition: {x: 0, y: 0, z: 1.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
-  m_Father: {fileID: 472646}
-  m_RootOrder: 1
+  m_Father: {fileID: 491732}
+  m_RootOrder: 0
 --- !u!4 &472646
 Transform:
   m_ObjectHideFlags: 1
@@ -76,7 +76,6 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 491732}
-  - {fileID: 439640}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &491732
@@ -85,11 +84,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 165754}
-  m_LocalRotation: {x: 0.4619398, y: 0.19134171, z: 0.19134171, w: 0.8446232}
+  m_LocalRotation: {x: 0, y: 0, z: -0.25881907, w: 0.9659258}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 45, y: 45, z: 45}
-  m_Children: []
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -30}
+  m_Children:
+  - {fileID: 439640}
   m_Father: {fileID: 472646}
   m_RootOrder: 0
 --- !u!23 &2375400
@@ -136,7 +136,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   self: {fileID: 165754}
---- !u!114 &11489450
+--- !u!114 &11487740
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -172,22 +172,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 165754}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de5e1bedc1382bd438faa78d39a6cce1, type: 3}
+  m_Script: {fileID: 11500000, guid: 7663b4c4cd1c7114ca68f465e142c73c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Player: {fileID: 5403420, guid: 1c85748afb8a2164fa09bc033cbbe330, type: 2}
-  m_FireRate: 1
-  m_Turnrate: 12
+  m_MoveRate: 16
+  m_FireRate: 0.1
   m_BurstNumber: 5
-  m_Shell: {fileID: 5481676, guid: 6d56c191ac074f94dbf5912a31b9014e, type: 2}
+  m_Shell: {fileID: 5444970, guid: 6d56c191ac074f94dbf5912a31b9014e, type: 2}
   m_FireTransform: {fileID: 439640}
   m_LaunchForce: 30
   scalefactor: 10
-  m_FlankerNumber: 1
-  m_TotalFlankers: 1
-  m_FireSignal: 0
   m_Self: {fileID: 5443040}
-  m_Instance: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
