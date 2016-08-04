@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class PlayerHealth : MonoBehaviour {
 
     public float m_StartingHealth = 200f;
+    public int m_Lives = 3;
     public Slider m_Slider;
     public Image m_FillImage;
     public Color m_FullHealthColor = new Color(255f, 255f, 255f, 90f); // Green color at full health
@@ -14,6 +15,9 @@ public class PlayerHealth : MonoBehaviour {
     public GameObject m_HealthText;
     Text m_HealthValue;
 
+    public GameObject m_LivesText;
+    Text m_LivesValue;
+
     float m_CurrentHealth;
     //bool isDead;
 
@@ -23,6 +27,7 @@ public class PlayerHealth : MonoBehaviour {
         //// isDead = false;
 
         m_HealthValue = m_HealthText.GetComponent<Text>();
+        m_LivesValue = m_LivesText.GetComponent<Text>();
 
         // Update the health slider's value and color
         SetHealthUI();
@@ -42,6 +47,9 @@ public class PlayerHealth : MonoBehaviour {
     void SetText() {
         m_HealthValue.text = m_CurrentHealth + "<size=20>/200</size>";
         m_HealthValue.color = Color.Lerp(m_ZeroHealthTextColor, m_FullHealthTextColor, m_CurrentHealth / m_StartingHealth);
+
+        // Update the text in the lives label
+        m_LivesValue.text = "Lives: " + "<size=48>" + m_Lives + "</size>";
     }
 
     void Update() {
@@ -52,4 +60,12 @@ public class PlayerHealth : MonoBehaviour {
         }
         SetText();
     }
+
+    /*
+     * if(isDead) {
+     *      lives--;
+     * }
+     *
+     * if(lives == 0) GameOver();
+     */
 }
