@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+//using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -58,6 +59,6 @@ public class MenuManager : MonoBehaviour {
         float fadeTime = gameObject.GetComponent<Fading>().BeginFade(1);
         yield return new WaitForSeconds(fadeTime);
 
-        SceneManager.LoadScene("Main", LoadSceneMode.Single);
+        SceneManager.LoadScene(1, LoadSceneMode.Single);
     }  
 }
