@@ -49,8 +49,8 @@ public class Player_Firing : MonoBehaviour {
 		m_Fired = true;
 		Rigidbody shellInstance = Instantiate (m_Shell, m_FireTransform.position, m_FireTransform.rotation) as Rigidbody;
 		shellInstance.velocity = m_CurrentLaunchForce * m_FireTransform.up;;
-		Vector3 Recoil = new Vector3 (0f, 0f, m_CurrentLaunchForce);
-		m_Player.AddForce (Recoil);
+		/*Vector3 Recoil = new Vector3 (0f, 0f, m_CurrentLaunchForce);
+		m_Player.AddForce (Recoil);*/
 		m_CurrentLaunchForce = m_LaunchForce;
 	}
 }
