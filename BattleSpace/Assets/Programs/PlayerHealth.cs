@@ -3,10 +3,15 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour {
 
+	public GameManager gameManager;
+
     public float m_StartingHealth = 200f;
     public int m_Lives = 3;
+
     public Slider m_Slider;
+
     public Image m_FillImage;
+
     public Color m_FullHealthColor = new Color(255f, 255f, 255f, 90f); // Green color at full health
     public Color m_ZeroHealthColor = new Color (255f, 48f, 0f, 90f); // Red color at zero health
     public Color m_FullHealthTextColor = Color.green;
@@ -19,7 +24,7 @@ public class PlayerHealth : MonoBehaviour {
     Text m_LivesValue;
 
     float m_CurrentHealth;
-    //bool isDead;
+    bool isDead;
 
     void Start() {
         // When the player is enabled (change function name to onEnable), reset its health and its death status
@@ -66,6 +71,6 @@ public class PlayerHealth : MonoBehaviour {
      *      lives--;
      * }
      *
-     * if(lives == 0) GameOver();
+     * if(lives == 0) gameManager.GameOver();
      */
 }
