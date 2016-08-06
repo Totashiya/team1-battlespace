@@ -17,6 +17,8 @@ public class PlayerMovement : MonoBehaviour {
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
 
+
+		m_Rigidbody.Sleep ();
         Move(horizontal, vertical);
 	}
 

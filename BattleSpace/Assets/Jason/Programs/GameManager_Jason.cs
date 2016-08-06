@@ -10,12 +10,16 @@ public class GameManager_Jason : MonoBehaviour {
 	public Rigidbody Player;
 	public Transform TacticalReturn;
 	public Transform PlayerSpawn;
-
+	public float EnemyCoeffiecient;
+	public float MaximumEnemies;
 	public int scale;
 	public int starter;
 
 	private float target;
-
+	private float EnemyNumberDecimal;
+	private int EnemyNumber;
+	private int WaveNumber;
+	private int prevEnemyNumber;
 	// Use this for initialization
 	void Start () {
 
@@ -25,18 +29,33 @@ public class GameManager_Jason : MonoBehaviour {
 		//	CreateEnemy(i-m_InitialSpawn/2);
 		//}
 		target = Time.time + m_SpawnRate;
+		WaveNumber = 1;
+		CreateEnemy (Random.Range (-10f, 10f), 0f);
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 		if (Time.time > target) {
-			CreateEnemy ();
+			NextWave ();
 			target = Time.time + m_SpawnRate;
 		}
 	}
-	private void CreateEnemy(){
-		Vector3 Compensation = new Vector3 (Random.Range(-20f,20f),0f,0f);
+	private void CreateEnemy(float x, float y){
+		Vector3 Compensation = new Vector3 (x, 0f, y);
 		Vector3 CreatedEnemy = OriginalSpawn.position + Compensation;
 		GameObject CreatEnemy = Instantiate(Enemy,CreatedEnemy, OriginalSpawn.rotation) as GameObject;
+	}
+	private void NextWave(){
+		EnemyNumberDecimal = -(EnemyCoeffiecient / WaveNumber) + MaximumEnemies;
+		EnemyNumber = (int) Mathf.Round (EnemyNumberDecimal);
+		if (EnemyNumber == prevEnemyNumber) {
+			EnemyNumber -= 1;
+		}
+		float k = 40 / EnemyNumber;
+		for (int i = 0; i < EnemyNumber; i++) {
+			CreateEnemy ((i * k) - 17, EnemyNumber % 2);
+		}
+		WaveNumber++;
+		prevEnemyNumber = EnemyNumber;
 	}
 }

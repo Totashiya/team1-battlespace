@@ -8,7 +8,6 @@ public class BasicManager: MonoBehaviour{
 	public float m_MoveRate;
 	public Rigidbody m_Self;
 	public Rigidbody m_Shell;
-	public GameObject m_GSelf;
 	public Transform m_FireTransform;
 	public int m_CurrentLaunchForce;
 
@@ -34,9 +33,6 @@ public class BasicManager: MonoBehaviour{
 			shellInstance.velocity = m_CurrentLaunchForce * m_FireTransform.up;
 			m_FireFlag = false;
 		}
-	}
-	void OnTriggerEnter(){
-		Destroy (m_GSelf);
 	}
 }
 
