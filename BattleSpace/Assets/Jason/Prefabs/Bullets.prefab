@@ -18,7 +18,7 @@ GameObject:
   - 114: {fileID: 114000013610046082}
   m_Layer: 0
   m_Name: Bullet
-  m_TagString: Untagged
+  m_TagString: PlayerBullets
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -219,7 +219,7 @@ GameObject:
   - 114: {fileID: 114000011089388888}
   m_Layer: 0
   m_Name: HomingBullet
-  m_TagString: Untagged
+  m_TagString: EnemyBullets
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

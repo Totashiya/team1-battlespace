@@ -26,7 +26,7 @@ public class BulletDisappear : MonoBehaviour {
 	}
 
 
-	void OnTriggerEnter(){
+	void OnTriggerEnter(Collider other){
 		DestroyFlag = true;
 	}
 }

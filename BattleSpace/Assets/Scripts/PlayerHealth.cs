@@ -23,12 +23,11 @@ public class PlayerHealth : MonoBehaviour {
     public GameObject m_LivesText;
     Text m_LivesValue;
 
-    float m_CurrentHealth;
+	float m_CurrentHealth;
 
     void Start() {
         // When the player is enabled (change function name to onEnable), reset its health and its death status
         m_CurrentHealth = m_StartingHealth;
-        //// isDead = false;
 
         m_HealthValue = m_HealthText.GetComponent<Text>();
         m_LivesValue = m_LivesText.GetComponent<Text>();
@@ -47,9 +46,7 @@ public class PlayerHealth : MonoBehaviour {
         // interpolate the color of the slider between m_FullHealthColor and m_ZeroHealthColor based on current percentage of the starting health
         m_FillImage.color = Color.Lerp(m_ZeroHealthColor, m_FullHealthColor, m_CurrentHealth / m_StartingHealth);
 
-        if (m_CurrentHealth <= 0) {
-            Dead();
-        }
+		SetText ();
     }
 
     void SetText() {
@@ -61,12 +58,7 @@ public class PlayerHealth : MonoBehaviour {
     }
 
     void Update() {
-        // debug key
-        if(Input.GetKeyDown(KeyCode.Q)) {
-            Dead();
-        }
-        
-        SetText();
+
     }
 
     void Dead() {
@@ -78,10 +70,16 @@ public class PlayerHealth : MonoBehaviour {
 
             // Probably respawn the player (instantiate a new copy?)
 
-            // hard code reset health
-            m_CurrentHealth = 200;
+            // hard code to reset health
+            m_CurrentHealth = 200f;
         }
     }
+
+	public void takeDamage() {
+		Debug.Log ("PlayerHealth: Decreased health by 10");
+		m_CurrentHealth -= 10;
+		SetHealthUI ();
+	}
 
     /*
      * if(isDead) {
