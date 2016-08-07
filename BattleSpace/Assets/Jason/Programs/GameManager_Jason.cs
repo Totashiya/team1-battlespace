@@ -22,7 +22,7 @@ public class GameManager_Jason : MonoBehaviour {
 	private int prevEnemyNumber;
 	// Use this for initialization
 	void Start () {
-
+        Physics.IgnoreLayerCollision(8, 9);
 		GameObject m_Player = Instantiate (Player, PlayerSpawn.position, PlayerSpawn.rotation) as GameObject;
 
 		//for (int i = 0; i < m_InitialSpawn; i++){

@@ -181,7 +181,7 @@ CapsuleCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 139780}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
   m_Height: 2
@@ -211,3 +211,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameManager: {fileID: 1000013223600546, guid: e522c7cb94d634b9790379b66aa75fca,
     type: 2}
+  collided: 0

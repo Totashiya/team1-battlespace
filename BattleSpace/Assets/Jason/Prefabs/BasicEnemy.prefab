@@ -14,7 +14,7 @@ GameObject:
   - 54: {fileID: 5484516}
   - 114: {fileID: 11443610}
   - 135: {fileID: 135000012997577164}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Enemy Hit Zero
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 486898}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FireTransform
   m_TagString: Untagged
   m_Icon: {fileID: 0}

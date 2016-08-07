@@ -164,6 +164,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destroy: 1
   m_Rigidbody: {fileID: 150268}
+  enemyCollider: {fileID: 0}
 --- !u!136 &13626788
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -217,7 +218,7 @@ GameObject:
   - 136: {fileID: 136000013103637774}
   - 114: {fileID: 114000011716012774}
   - 114: {fileID: 114000011089388888}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HomingBullet
   m_TagString: EnemyBullets
   m_Icon: {fileID: 0}
@@ -335,6 +336,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Player: {fileID: 5403420, guid: 58b30208820d39541af0398f29f1351a, type: 2}
   m_Speed: 1
+  m_Damage: 10
 --- !u!114 &114000011716012774
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -348,6 +350,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destroy: 3
   m_Rigidbody: {fileID: 1000013361316968}
+  enemyCollider: {fileID: 6560672, guid: 020b6ffa7f3c6fe46b27f83805d4c267, type: 2}
 --- !u!114 &114000013610046082
 MonoBehaviour:
   m_ObjectHideFlags: 1

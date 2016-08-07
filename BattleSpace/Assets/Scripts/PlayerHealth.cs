@@ -58,7 +58,10 @@ public class PlayerHealth : MonoBehaviour {
     }
 
     void Update() {
-
+        if(Input.GetKeyDown(KeyCode.Q)) {
+            Dead();
+        }
+        SetHealthUI();
     }
 
     void Dead() {
@@ -75,10 +78,14 @@ public class PlayerHealth : MonoBehaviour {
         }
     }
 
-	public void takeDamage() {
-		Debug.Log ("PlayerHealth: Decreased health by 10");
-		m_CurrentHealth -= 10;
+	public void takeDamage(int damage) {
+		//Debug.Log ("PlayerHealth: Decreased health by 10");
+        m_CurrentHealth -= damage;
 		SetHealthUI ();
+
+        if(m_CurrentHealth <= 10) {
+            Dead();
+        }
 	}
 
     /*

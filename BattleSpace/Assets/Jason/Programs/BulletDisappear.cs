@@ -5,6 +5,7 @@ public class BulletDisappear : MonoBehaviour {
 
 	public float destroy;
 	public GameObject m_Rigidbody;
+    public Collider enemyCollider;
 
 	private bool DestroyFlag;
 	private float target;

@@ -10,19 +10,12 @@ public class GameManager : MonoBehaviour {
 
     int finalScore;
 
-	// Use this for initialization
-	void Start () { 
-        
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	}
-
 	public IEnumerator GameOver() {
         // Store the final score and then fade into the game over screen
         //finalScore = scoreManager.m_Score;
         //PlayerPrefs.SetInt("Final Score", finalScore);
+
+        Time.timeScale = 0.5f; // slow down time as the screen dramatically fades to black
 
 		gameObject.GetComponent<Fading>().BeginFade(1);
 		yield return new WaitForSeconds(fadeTime);
