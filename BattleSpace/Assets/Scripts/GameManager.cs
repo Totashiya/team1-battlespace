@@ -1,10 +1,10 @@
-﻿using UnityEngine;
+﻿
+
+using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class GameManager : MonoBehaviour {
-
-    //public PlayerScore scoreManager;
 
 	public float fadeTime = 1f;
 
@@ -12,10 +12,10 @@ public class GameManager : MonoBehaviour {
 
 	public IEnumerator GameOver() {
         // Store the final score and then fade into the game over screen
-        //finalScore = scoreManager.m_Score;
-        //PlayerPrefs.SetInt("Final Score", finalScore);
+		finalScore = gameObject.GetComponent<PlayerScore>().m_Score;
+        PlayerPrefs.SetInt("Final Score", finalScore);
 
-        Time.timeScale = 0.5f; // slow down time as the screen dramatically fades to black
+        Time.timeScale = 0.5f; // slow down time as the screen dramatically darkens
 
 		gameObject.GetComponent<Fading>().BeginFade(1);
 		yield return new WaitForSeconds(fadeTime);

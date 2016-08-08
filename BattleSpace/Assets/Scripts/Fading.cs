@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class Fading : MonoBehaviour {
@@ -28,9 +29,15 @@ public class Fading : MonoBehaviour {
         return (fadeSpeed); // return the fadeSpeed variable so it's easy to time the Application.LoadLevel();
     }
 
+
+	void FadeIn() {
+		BeginFade (-1);
+	}
+		
     // OnLevelWasLoaded is called when a level is loaded. It takes loaded level index (int) as a parameter so you can limit the fade in to certain scenes
     void OnLevelWasLoaded () {
         // alpha = 1; // use this if the alpha is not set to 1 by default
         BeginFade(-1);
     }
+
 }

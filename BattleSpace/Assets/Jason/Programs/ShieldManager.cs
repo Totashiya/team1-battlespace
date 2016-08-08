@@ -11,18 +11,18 @@ public class ShieldManager : MonoBehaviour {
 	public Rigidbody m_Self;
 	[HideInInspector] public GameObject m_Instance;
 
-	private float m_targetfiretime;
-	private int m_position;
-	private float m_degrees;
+	// private float m_targetfiretime;	// commented out to remove warning
+	// private int m_position;			// commented out to remove warning
+	// private float m_degrees;			// commented out to remove warning
 	private Vector3 m_relativelocation;
 	private float m_xlocation;
 	private float m_ylocation;
 	private int m_prevShieldNumber;
 	// Use this for initialization
 	void Start () {
-		m_targetfiretime = 0f;
-		m_degrees = 0f;
-		m_position = 0;
+		// m_targetfiretime = 0f;
+		// m_degrees = 0f;
+		// m_position = 0;
 		switch (m_TotalShielders) {
 		case 1:
 			m_xlocation = 0.5f;
@@ -32,11 +32,9 @@ public class ShieldManager : MonoBehaviour {
 			if (m_ShieldNumber == 1) {
 				m_xlocation = 0.5f;
 				m_ylocation = 0.5f;
-				break;
 			} else {
 				m_xlocation = 0.6f;
 				m_ylocation = 0.6f;
-				break;
 			}
 			break;
 		case 3:
