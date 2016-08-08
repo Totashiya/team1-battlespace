@@ -13,9 +13,9 @@ GameObject:
   - 23: {fileID: 2309548}
   - 108: {fileID: 10828590}
   - 54: {fileID: 5444970}
-  - 136: {fileID: 13630056}
   - 114: {fileID: 11499804}
   - 114: {fileID: 114000013610046082}
+  - 65: {fileID: 65000014264742160}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: PlayerBullets
@@ -115,7 +115,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 4
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!108 &10828590
 Light:
@@ -163,22 +163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroy: 1
-  m_Rigidbody: {fileID: 150268}
-  enemyCollider: {fileID: 0}
 --- !u!136 &13626788
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 150268}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &13630056
 CapsuleCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -187,8 +172,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 1.9999996
+  m_Radius: 0.5
+  m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &100100000
@@ -289,6 +274,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 4
   m_CollisionDetection: 0
+--- !u!65 &65000014264742160
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 150268}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0000001, y: 2, z: 1.0000002}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!108 &108000010820440182
 Light:
   m_ObjectHideFlags: 1
@@ -349,8 +346,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroy: 3
-  m_Rigidbody: {fileID: 1000013361316968}
-  enemyCollider: {fileID: 6560672, guid: 020b6ffa7f3c6fe46b27f83805d4c267, type: 2}
 --- !u!114 &114000013610046082
 MonoBehaviour:
   m_ObjectHideFlags: 1

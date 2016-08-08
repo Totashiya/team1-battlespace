@@ -29,13 +29,17 @@ public class PlayerScore : MonoBehaviour {
 
         m_ScoreValue = m_ScoreText.GetComponent<Text>();
         m_HighestScoreValue = m_HighestScoreText.GetComponent<Text>();
-	
+
+        SetScoreText();	
 	}
 	
 	void Update () {
-        SetScoreText();	
 	}
 
+    public void AddScore(int points) {
+        m_Score += points;
+        SetScoreText();
+    }
 
     void SetScoreText() {
         // Set the text of the score and the highest score.

@@ -4,8 +4,6 @@ using System.Collections;
 public class BulletDisappear : MonoBehaviour {
 
 	public float destroy;
-	public GameObject m_Rigidbody;
-    public Collider enemyCollider;
 
 	private bool DestroyFlag;
 	private float target;
@@ -21,11 +19,10 @@ public class BulletDisappear : MonoBehaviour {
 			DestroyFlag = true;
 		}
 		if (DestroyFlag == true) {
-			Destroy (m_Rigidbody);
+			Destroy (gameObject);
 		}
 
 	}
-
 
 	void OnTriggerEnter(Collider other){
 		DestroyFlag = true;

@@ -15,8 +15,8 @@ GameObject:
   - 114: {fileID: 11443610}
   - 135: {fileID: 135000012997577164}
   m_Layer: 8
-  m_Name: Enemy Hit Zero
-  m_TagString: Untagged
+  m_Name: Enemy
+  m_TagString: Enemies
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

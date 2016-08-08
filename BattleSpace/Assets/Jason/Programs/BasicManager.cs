@@ -35,5 +35,7 @@ public class BasicManager: MonoBehaviour{
 			m_FireFlag = false;
 		}
 	}
+
+
 }
 
