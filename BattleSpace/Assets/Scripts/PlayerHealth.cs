@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour {
@@ -23,7 +24,9 @@ public class PlayerHealth : MonoBehaviour {
     public GameObject m_LivesText;
     Text m_LivesValue;
 
-	float m_CurrentHealth;
+    public GameObject m_RespawnText;
+
+	public float m_CurrentHealth;
 
     void Start() {
         // When the player is enabled (change function name to onEnable), reset its health and its death status
@@ -70,11 +73,9 @@ public class PlayerHealth : MonoBehaviour {
         }
         else {
             m_Lives--;
-
-            // Probably respawn the player (instantiate a new copy?)
-
-            // hard code to reset health
-            m_CurrentHealth = 200f;
+            
+            StartCoroutine(gameObject.GetComponent<GameManager_Jason>().Respawn());
+            StartCoroutine(RespawnTimer());
         }
     }
 
@@ -83,16 +84,14 @@ public class PlayerHealth : MonoBehaviour {
         m_CurrentHealth -= damage;
 		SetHealthUI ();
 
-        if(m_CurrentHealth <= 10) {
+        if(m_CurrentHealth <= 0) {
             Dead();
         }
 	}
 
-    /*
-     * if(isDead) {
-     *      lives--;
-     * }
-     *
-     * if(lives == 0) gameManager.GameOver();
-     */
+    IEnumerator RespawnTimer() {
+        m_RespawnText.SetActive(true);
+        yield return new WaitForSeconds(3f);
+        m_RespawnText.SetActive(false);
+    }
 }

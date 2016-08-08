@@ -3,7 +3,9 @@ using System.Collections;
 
 public class GameManager_Jason : MonoBehaviour {
 
-	public float m_SpawnRate;
+    public GameObject m_Player;
+
+    public float m_SpawnRate;
 	public int m_InitialSpawn;
 	public Transform OriginalSpawn;
 	public Rigidbody Enemy;
@@ -23,7 +25,7 @@ public class GameManager_Jason : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         Physics.IgnoreLayerCollision(8, 9);
-		GameObject m_Player = Instantiate (Player, PlayerSpawn.position, PlayerSpawn.rotation) as GameObject;
+		m_Player = Instantiate (Player, PlayerSpawn.position, PlayerSpawn.rotation) as GameObject;
 
 		//for (int i = 0; i < m_InitialSpawn; i++){
 		//	CreateEnemy(i-m_InitialSpawn/2);
@@ -58,4 +60,20 @@ public class GameManager_Jason : MonoBehaviour {
 		WaveNumber++;
 		prevEnemyNumber = EnemyNumber;
 	}
+
+    public IEnumerator Respawn() {
+        PlayerHealth playerHealth = GameObject.Find("GameManager").GetComponent<PlayerHealth>();
+
+        Debug.Log("Respawning");
+        Destroy(GameObject.Find("PlayerCapsule(Clone)"));
+
+        Time.timeScale = 0.75f; // make everything slow before respawning
+
+        yield return new WaitForSeconds(3f); // wait 3 seconds before respawning
+
+        Time.timeScale = 1f;
+        m_Player = Instantiate(Player, PlayerSpawn.position, PlayerSpawn.rotation) as GameObject;
+        playerHealth.m_CurrentHealth = 200f;
+    }
+
 }
