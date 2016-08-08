@@ -1389,7 +1389,7 @@ MonoBehaviour:
   Player: {fileID: 5403420, guid: 58b30208820d39541af0398f29f1351a, type: 2}
   TacticalReturn: {fileID: 0}
   PlayerSpawn: {fileID: 1979503055}
-  EnemyCoeffiecient: 24
+  EnemyCoeffiecient: 1000
   MaximumEnemies: 15
   scale: 0
   starter: 0

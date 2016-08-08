@@ -29,8 +29,8 @@ public class GameManager_Jason : MonoBehaviour {
 		//	CreateEnemy(i-m_InitialSpawn/2);
 		//}
 		target = Time.time + m_SpawnRate;
-		WaveNumber = 1;
-		CreateEnemy (Random.Range (-10f, 10f), 0f);
+		WaveNumber = 70;
+		NextWave ();
 	}
 
 	// Update is called once per frame
@@ -51,7 +51,12 @@ public class GameManager_Jason : MonoBehaviour {
 		if (EnemyNumber == prevEnemyNumber) {
 			EnemyNumber -= 1;
 		}
-		float k = 40 / EnemyNumber;
+		float k = 0;
+		if (EnemyNumber == 0) {
+			k = 17;
+		} else {
+			k = 40 / EnemyNumber;
+		}
 		for (int i = 0; i < EnemyNumber; i++) {
 			CreateEnemy ((i * k) - 17, EnemyNumber % 2);
 		}

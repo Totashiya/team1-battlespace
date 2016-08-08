@@ -333,7 +333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d4cdb0e4db3bca47ac9a62c01e4f0ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Player: {fileID: 5403420, guid: 58b30208820d39541af0398f29f1351a, type: 2}
+  m_Player: {fileID: 404284, guid: 58b30208820d39541af0398f29f1351a, type: 2}
   m_Speed: 1
 --- !u!114 &114000011716012774
 MonoBehaviour:
