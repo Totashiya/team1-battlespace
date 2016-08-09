@@ -43,11 +43,13 @@ public class GameManager_Jason : MonoBehaviour {
 			target = Time.time + m_SpawnRate;
 		}
 	}
+
 	private void CreateEnemy(float x, float y){
 		Vector3 Compensation = new Vector3 (x, 0f, y);
 		Vector3 CreatedEnemy = OriginalSpawn.position + Compensation;
 		Instantiate(Enemy,CreatedEnemy, OriginalSpawn.rotation);
 	}
+
 	private void NextWave(){
 		EnemyNumberDecimal = -(EnemyCoeffiecient / WaveNumber) + MaximumEnemies;
 		EnemyNumber = (int) Mathf.Round (EnemyNumberDecimal);
