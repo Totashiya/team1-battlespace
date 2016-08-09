@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour {
 	public IEnumerator GameOver() {
         // Store the final score and then fade into the game over screen
 		finalScore = gameObject.GetComponent<PlayerScore>().m_Score;
-        PlayerPrefs.SetInt("Final Score", finalScore);
+        PlayerPrefs.SetInt("FinalScore", finalScore);
 
         Time.timeScale = 0.5f; // slow down time as the screen dramatically darkens
 

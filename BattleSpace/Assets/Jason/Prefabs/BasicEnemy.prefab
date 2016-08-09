@@ -171,7 +171,7 @@ MonoBehaviour:
   m_Self: {fileID: 5484516}
   m_Shell: {fileID: 54000011311723204, guid: d30c933f849b38a4a87f7fce0a186e07, type: 2}
   m_FireTransform: {fileID: 486898}
-  m_CurrentLaunchForce: 30
+  m_CurrentLaunchForce: 15
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
