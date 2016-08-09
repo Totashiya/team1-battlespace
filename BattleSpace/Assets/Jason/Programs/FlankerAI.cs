@@ -16,7 +16,7 @@ public class FlankerAI : MonoBehaviour {
 	private float m_targetfiretime;
 	private int m_position;
 
-	private Vector3 m_relativelocation;
+	// private Vector3 m_relativelocation; //** commented out to remove warning
 
 	private int m_prevFlankerNumber;
 	private int m_direction;
@@ -30,7 +30,7 @@ public class FlankerAI : MonoBehaviour {
 		m_MovementAxisName = "Thrust";
 		m_YawAxisName = "Yaw";
 
-		m_Self.MovePosition (m_relativelocation);
+		// m_Self.MovePosition (m_relativelocation);
 	}
 	
 	// Update is called once per frame

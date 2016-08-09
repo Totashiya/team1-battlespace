@@ -129,6 +129,21 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114000010401536766, guid: af855a24813e9fa43a054e285888acd5,
+        type: 2}
+      propertyPath: NewRecordText
+      value: 
+      objectReference: {fileID: 1342146681}
+    - target: {fileID: 114000010401536766, guid: af855a24813e9fa43a054e285888acd5,
+        type: 2}
+      propertyPath: ScoreValue
+      value: 
+      objectReference: {fileID: 1195528544}
+    - target: {fileID: 114000010401536766, guid: af855a24813e9fa43a054e285888acd5,
+        type: 2}
+      propertyPath: HighScoreValue
+      value: 
+      objectReference: {fileID: 979050280}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: af855a24813e9fa43a054e285888acd5, type: 2}
   m_IsPrefabParent: 0
@@ -316,7 +331,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5955882, g: 0.98326564, b: 1, a: 1}
+  m_Color: {r: 0.7924182, g: 0.7924182, b: 0.7924182, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -690,7 +705,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1342146682
 RectTransform:
   m_ObjectHideFlags: 0
@@ -715,7 +730,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1342146681}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 

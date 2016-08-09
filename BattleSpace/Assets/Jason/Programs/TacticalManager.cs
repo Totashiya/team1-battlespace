@@ -12,14 +12,14 @@ public class TacticalManager : MonoBehaviour {
 	public float FireRate;
 	public int spawndebugger;
 
-	private int enemiesdestroyed;
+	// private int enemiesdestroyed;		// commented out to remove warning
 	public FlankerManager[] m_Flankers;
 	public ShieldManager[] Shielders;
 	public BasicManager[] Basics;
 	private float targettime;
 	// Use this for initialization
 	void Start () {
-		enemiesdestroyed = 0;
+		// enemiesdestroyed = 0;
 		for (int i = 0; i < m_Flankers.Length; i++) {
 			m_Flankers [i].m_Instance = Instantiate (AdvancedEnemy, m_Flankers[i].m_SpawnPoint.position, m_Flankers[i].m_SpawnPoint.rotation) as GameObject;
 			m_Flankers [i].m_FlankerNumber = i + 1;
@@ -39,6 +39,6 @@ public class TacticalManager : MonoBehaviour {
 	}
 	private void CreateShieldEnemy(){
 		Vector3 CreatedEnemy = OriginalSpawn.position;
-		GameObject ShielderEnemy = Instantiate(ShieldEnemy,CreatedEnemy, OriginalSpawn.rotation) as GameObject;
+		Instantiate(ShieldEnemy,CreatedEnemy, OriginalSpawn.rotation);
 	}
 }

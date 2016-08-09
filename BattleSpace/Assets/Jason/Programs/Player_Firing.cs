@@ -7,12 +7,14 @@ public class Player_Firing : MonoBehaviour {
 	public Rigidbody m_Shell;
 	public Rigidbody m_Player;
 	public Transform m_FireTransform;
+    public float fireRate = 0.5f;
 	public float m_LaunchForce = 30f; 
 	public float m_MaxChargeTime = 0.75f;
 
 	private string m_FireButton;         
 	private float m_CurrentLaunchForce;       
-	private bool m_Fired;                
+	private bool m_Fired;
+    private float lastShot = 0f; 
 
 
 	private void OnEnable()
@@ -30,6 +32,7 @@ public class Player_Firing : MonoBehaviour {
 	private void Update()
 	{
 		// Track the current state of the fire button and make decisions based on the current launch force.
+        /*
 		if (Input.GetButtonDown (m_FireButton)) 
 		{
 			m_Fired = false;
@@ -40,17 +43,22 @@ public class Player_Firing : MonoBehaviour {
 		{
 			Fire ();
 		}
+        */
+
+        if(Input.GetButton(m_FireButton)) {
+            if(Time.time > fireRate + lastShot) {
+                Fire();
+            }
+        }
 	}
 
 
-	private void Fire()
+	void Fire()
 	{
 		// Instantiate and launch the shell.
-		m_Fired = true;
 		Rigidbody shellInstance = Instantiate (m_Shell, m_FireTransform.position, m_FireTransform.rotation) as Rigidbody;
-		shellInstance.velocity = m_CurrentLaunchForce * m_FireTransform.up;;
-		/*Vector3 Recoil = new Vector3 (0f, 0f, m_CurrentLaunchForce);
-		m_Player.AddForce (Recoil);*/
-		m_CurrentLaunchForce = m_LaunchForce;
+		shellInstance.velocity = m_CurrentLaunchForce * m_FireTransform.up;
+        lastShot = Time.time;
+        //m_CurrentLaunchForce = m_LaunchForce;
 	}
 }

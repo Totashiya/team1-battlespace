@@ -156,7 +156,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_moveSpeed: 10
-  m_forwardSpeed: 0
+  leftBorder: 0.05
+  rightBorder: 0.95
+  topBorder: 0.9
+  botBorder: 0.1
 --- !u!114 &11425768
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -172,7 +175,8 @@ MonoBehaviour:
   m_Shell: {fileID: 5444970, guid: d30c933f849b38a4a87f7fce0a186e07, type: 2}
   m_Player: {fileID: 5403420}
   m_FireTransform: {fileID: 407232}
-  m_LaunchForce: 30
+  fireRate: 0.7
+  m_LaunchForce: 60
   m_MaxChargeTime: 0.75
 --- !u!136 &13667188
 CapsuleCollider:

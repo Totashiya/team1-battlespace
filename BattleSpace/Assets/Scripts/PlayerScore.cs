@@ -47,8 +47,11 @@ public class PlayerScore : MonoBehaviour {
         // and set the highest score to the current score. Might need a reference to PlayerHeath to set the highscore upon game over.
 
         if(m_Score > m_HighestScore) {
-            m_HighestScoreValue.color = m_NewRecordColor;
-            m_HighestScoreValue.text = "New Record!";
+            m_HighestScoreValue.color = m_NewRecordColor; // Change the color of the high score text
+            m_HighestScoreValue.text = "New Record!";     // Change the text to "New Record"
+			m_HighestScore = m_Score;
+
+			PlayerPrefs.SetInt ("HighestScore", m_HighestScore); // Change the old high score to the current score
 
             // also change the color of the current score (maybe)
             m_ScoreValue.color = m_NewRecordScoreColor;
