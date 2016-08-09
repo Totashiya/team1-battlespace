@@ -20,6 +20,7 @@ public class BasicManager: MonoBehaviour{
 		Vector3 DownwardForce = new Vector3 (0f, 0f, m_MoveRate);
 		m_Self.AddForce (DownwardForce);
 		m_FireFlag = false;
+
 	}
 	
 	// Update is called once per frame
@@ -34,5 +35,7 @@ public class BasicManager: MonoBehaviour{
 			m_FireFlag = false;
 		}
 	}
+
+
 }
 

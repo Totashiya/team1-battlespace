@@ -9,43 +9,76 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1000013865548352}
+  m_RootGameObject: {fileID: 1000013223600546}
   m_IsPrefabParent: 1
---- !u!1 &1000013865548352
+--- !u!1 &1000013223600546
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 4000012528560626}
-  - 114: {fileID: 114000012015381356}
+  - 4: {fileID: 4000010875074768}
+  - 114: {fileID: 114000012784500342}
+  - 114: {fileID: 114000010783281278}
+  - 114: {fileID: 114000010409657304}
+  - 114: {fileID: 114000014250969184}
+  - 114: {fileID: 114000010631179582}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4000012528560626
+--- !u!1 &1000013530345344
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000010062434912}
+  m_Layer: 0
+  m_Name: PlayerSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4000010062434912
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013865548352}
+  m_GameObject: {fileID: 1000013530345344}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071067}
+  m_LocalPosition: {x: 0, y: 0, z: 21.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 4000010875074768}
+  m_RootOrder: 0
+--- !u!4 &4000010875074768
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013223600546}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 475.5, y: 267.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -13.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
+  m_Children:
+  - {fileID: 4000010062434912}
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!114 &114000012015381356
+--- !u!114 &114000010409657304
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013865548352}
+  m_GameObject: {fileID: 1000013223600546}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c5a9aa1087e6de74fb74e2609cd90631, type: 3}
@@ -53,3 +86,75 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeOutTexture: {fileID: 2800000, guid: fdae86f7d0388ed40a30ceb33ac520ae, type: 3}
   fadeSpeed: 0.8
+--- !u!114 &114000010631179582
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013223600546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22210c0639039c2408fa61c1c089af32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ScoreText: {fileID: 0}
+  m_HighestScoreText: {fileID: 0}
+  m_Score: 0
+  m_NewRecordColor: {r: 1, g: 1, b: 0.7254902, a: 1}
+  m_NewRecordScoreColor: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &114000010783281278
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013223600546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 038007b77e36f435b8ba187bf01b9190, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeTime: 1
+--- !u!114 &114000012784500342
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013223600546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b61c430cb6ca80741b101deacab997ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SpawnRate: 5
+  m_InitialSpawn: 1
+  OriginalSpawn: {fileID: 4000010875074768}
+  Enemy: {fileID: 5484516, guid: 020b6ffa7f3c6fe46b27f83805d4c267, type: 2}
+  Player: {fileID: 5403420, guid: 58b30208820d39541af0398f29f1351a, type: 2}
+  TacticalReturn: {fileID: 0}
+  PlayerSpawn: {fileID: 4000010062434912}
+  EnemyCoeffiecient: 24
+  MaximumEnemies: 15
+  scale: 0
+  starter: 0
+--- !u!114 &114000014250969184
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013223600546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e352ecdf860a6dd4fafba1ed72518141, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 114000010783281278}
+  m_StartingHealth: 200
+  m_Lives: 3
+  m_Slider: {fileID: 0}
+  m_FillImage: {fileID: 0}
+  m_FullHealthColor: {r: 0, g: 1, b: 0, a: 0.3529412}
+  m_ZeroHealthColor: {r: 1, g: 0, b: 0, a: 0.3529412}
+  m_FullHealthTextColor: {r: 0.36551726, g: 1, b: 0, a: 1}
+  m_ZeroHealthTextColor: {r: 1, g: 0.020689659, b: 0, a: 1}
+  m_HealthText: {fileID: 0}
+  m_LivesText: {fileID: 0}
