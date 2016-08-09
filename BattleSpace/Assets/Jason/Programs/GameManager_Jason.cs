@@ -30,13 +30,14 @@ public class GameManager_Jason : MonoBehaviour {
 		//for (int i = 0; i < m_InitialSpawn; i++){
 		//	CreateEnemy(i-m_InitialSpawn/2);
 		//}
-		target = Time.time + m_SpawnRate;
+		target = 0;
 		WaveNumber = 1;
-		CreateEnemy (Random.Range (-10f, 10f), 0f);
+		// CreateEnemy (Random.Range (-10f, 10f), 0f);
 	}
 
 	// Update is called once per frame
 	void Update () {
+		print (Time.time);
 		if (Time.time > target) {
 			NextWave ();
 			target = Time.time + m_SpawnRate;

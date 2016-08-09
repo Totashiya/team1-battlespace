@@ -156,7 +156,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_moveSpeed: 10
-  m_forwardSpeed: 0
+  leftBorder: 0.05
+  rightBorder: 0.95
+  topBorder: 0.9
+  botBorder: 0.1
 --- !u!114 &11425768
 MonoBehaviour:
   m_ObjectHideFlags: 1
