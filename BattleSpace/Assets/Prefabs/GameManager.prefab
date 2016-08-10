@@ -138,14 +138,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b61c430cb6ca80741b101deacab997ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SpawnRate: 10
+  m_SpawnRate: 5
   m_InitialSpawn: 0
   OriginalSpawn: {fileID: 4000010875074768}
   Enemy: {fileID: 5484516, guid: 020b6ffa7f3c6fe46b27f83805d4c267, type: 2}
   Player: {fileID: 5403420, guid: 58b30208820d39541af0398f29f1351a, type: 2}
   TacticalReturn: {fileID: 0}
   PlayerSpawn: {fileID: 4000010062434912}
-  EnemyCoeffiecient: 24
+  EnemyCoeffiecient: 1000
   MaximumEnemies: 15
   scale: 0
   starter: 0

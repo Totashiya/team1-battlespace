@@ -63,7 +63,7 @@ public class GameManager_Jason : MonoBehaviour {
         else {
             k = 40 / EnemyNumber;
         }
-        for (int i = 1; i < EnemyNumber; i++) {
+        for (int i = 0; i < EnemyNumber; i++) {
             CreateEnemy((i * k) - 17, EnemyNumber % 2);
         }
         WaveNumber++;

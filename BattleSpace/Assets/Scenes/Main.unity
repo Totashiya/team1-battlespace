@@ -2838,6 +2838,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114000010631179582, guid: e522c7cb94d634b9790379b66aa75fca,
+        type: 2}
+      propertyPath: m_ScoreText
+      value: 
+      objectReference: {fileID: 1766065478}
+    - target: {fileID: 114000010631179582, guid: e522c7cb94d634b9790379b66aa75fca,
+        type: 2}
+      propertyPath: m_HighestScoreText
+      value: 
+      objectReference: {fileID: 1058745327}
     - target: {fileID: 114000014250969184, guid: e522c7cb94d634b9790379b66aa75fca,
         type: 2}
       propertyPath: m_Slider
@@ -2863,16 +2873,6 @@ Prefab:
       propertyPath: m_RespawnText
       value: 
       objectReference: {fileID: 1912343483}
-    - target: {fileID: 114000010631179582, guid: e522c7cb94d634b9790379b66aa75fca,
-        type: 2}
-      propertyPath: m_ScoreText
-      value: 
-      objectReference: {fileID: 1766065478}
-    - target: {fileID: 114000010631179582, guid: e522c7cb94d634b9790379b66aa75fca,
-        type: 2}
-      propertyPath: m_HighestScoreText
-      value: 
-      objectReference: {fileID: 1058745327}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e522c7cb94d634b9790379b66aa75fca, type: 2}
   m_IsPrefabParent: 0
