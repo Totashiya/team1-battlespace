@@ -68,7 +68,7 @@ public class PlayerHealth : MonoBehaviour {
     }
 
     void Dead() {
-        if(m_Lives <= 0) {
+        if(m_Lives < 1) {
             StartCoroutine(gameManager.GameOver());
         }
         else {
