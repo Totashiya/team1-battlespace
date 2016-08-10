@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_FireRate: 2
-  m_MoveRate: 30
+  m_MoveRate: 45
   m_Self: {fileID: 5484516}
   m_Shell: {fileID: 54000011311723204, guid: d30c933f849b38a4a87f7fce0a186e07, type: 2}
   m_FireTransform: {fileID: 486898}

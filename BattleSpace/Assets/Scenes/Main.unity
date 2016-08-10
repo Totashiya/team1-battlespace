@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.05596926, g: 0.048798926, b: 0.045347854, a: 1}
+  m_IndirectSpecularColor: {r: 0.05598923, g: 0.048733354, b: 0.045373738, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1120,7 +1120,7 @@ ParticleSystem:
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 0.9490196, b: 0.54509807, a: 0.77254903}
+      maxColor: {r: 1, g: 0.9843137, b: 0.85490197, a: 0.77254903}
       minMaxState: 0
     startSize:
       scalar: 0.11
@@ -2844,6 +2844,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114000010631179582, guid: e522c7cb94d634b9790379b66aa75fca,
+        type: 2}
+      propertyPath: m_ScoreText
+      value: 
+      objectReference: {fileID: 1766065478}
+    - target: {fileID: 114000010631179582, guid: e522c7cb94d634b9790379b66aa75fca,
+        type: 2}
+      propertyPath: m_HighestScoreText
+      value: 
+      objectReference: {fileID: 1058745327}
     - target: {fileID: 114000014250969184, guid: e522c7cb94d634b9790379b66aa75fca,
         type: 2}
       propertyPath: m_Slider
@@ -2864,55 +2874,15 @@ Prefab:
       propertyPath: m_LivesText
       value: 
       objectReference: {fileID: 286240822}
-    - target: {fileID: 114000010631179582, guid: e522c7cb94d634b9790379b66aa75fca,
-        type: 2}
-      propertyPath: m_ScoreText
-      value: 
-      objectReference: {fileID: 1766065478}
-    - target: {fileID: 114000010631179582, guid: e522c7cb94d634b9790379b66aa75fca,
-        type: 2}
-      propertyPath: m_HighestScoreText
-      value: 
-      objectReference: {fileID: 1058745327}
-    - target: {fileID: 114000014250969184, guid: e522c7cb94d634b9790379b66aa75fca,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000012784500342, guid: e522c7cb94d634b9790379b66aa75fca,
-        type: 2}
-      propertyPath: m_SpawnRate
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000012784500342, guid: e522c7cb94d634b9790379b66aa75fca,
-        type: 2}
-      propertyPath: m_InitialSpawn
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010631179582, guid: e522c7cb94d634b9790379b66aa75fca,
-        type: 2}
-      propertyPath: m_NewRecordColor.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010631179582, guid: e522c7cb94d634b9790379b66aa75fca,
-        type: 2}
-      propertyPath: m_NewRecordColor.g
-      value: 0.78275865
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010631179582, guid: e522c7cb94d634b9790379b66aa75fca,
-        type: 2}
-      propertyPath: m_NewRecordColor.b
-      value: 0.25
-      objectReference: {fileID: 0}
     - target: {fileID: 114000014250969184, guid: e522c7cb94d634b9790379b66aa75fca,
         type: 2}
       propertyPath: m_RespawnText
       value: 
       objectReference: {fileID: 1912343483}
-    - target: {fileID: 114000010783281278, guid: e522c7cb94d634b9790379b66aa75fca,
+    - target: {fileID: 114000012784500342, guid: e522c7cb94d634b9790379b66aa75fca,
         type: 2}
-      propertyPath: fadeTime
-      value: 2
+      propertyPath: EnemyCoeffiecient
+      value: 1000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e522c7cb94d634b9790379b66aa75fca, type: 2}
@@ -3084,22 +3054,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1289336273}
   m_RootOrder: 5
---- !u!1 &1190892257 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1000013223600546, guid: e522c7cb94d634b9790379b66aa75fca,
-    type: 2}
-  m_PrefabInternal: {fileID: 1062241974}
---- !u!114 &1190892258
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1190892257}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49ae472f7c8012d4b8f1c79d2ea1d199, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1253780115
 GameObject:
   m_ObjectHideFlags: 0
@@ -3727,7 +3681,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'SHIP DESTROYED
 
-    <size=24>Respawning in 3 seconds...</size>'
+    <size=24><color=orange>Redeploying...</color></size>'
 --- !u!222 &1912343486
 CanvasRenderer:
   m_ObjectHideFlags: 0

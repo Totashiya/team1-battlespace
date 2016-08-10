@@ -3,7 +3,7 @@ using System.Collections;
 
 public class GameManager_Jason : MonoBehaviour {
 
-    public GameObject m_Player;
+    // public GameObject m_Player;
 
     public float m_SpawnRate;
 	public int m_InitialSpawn;
@@ -25,14 +25,14 @@ public class GameManager_Jason : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         Physics.IgnoreLayerCollision(8, 9);
-		m_Player = Instantiate (Player, PlayerSpawn.position, PlayerSpawn.rotation) as GameObject;
+        Instantiate(Player, PlayerSpawn.position, PlayerSpawn.rotation);
 
 		//for (int i = 0; i < m_InitialSpawn; i++){
 		//	CreateEnemy(i-m_InitialSpawn/2);
 		//}
-		target = 0;
-		WaveNumber = 1;
-		// CreateEnemy (Random.Range (-10f, 10f), 0f);
+		target = m_SpawnRate;
+		WaveNumber = 70;
+        NextWave();
 	}
 
 	// Update is called once per frame
@@ -50,19 +50,25 @@ public class GameManager_Jason : MonoBehaviour {
 		Instantiate(Enemy,CreatedEnemy, OriginalSpawn.rotation);
 	}
 
-	private void NextWave(){
-		EnemyNumberDecimal = -(EnemyCoeffiecient / WaveNumber) + MaximumEnemies;
-		EnemyNumber = (int) Mathf.Round (EnemyNumberDecimal);
-		if (EnemyNumber == prevEnemyNumber) {
-			EnemyNumber -= 1;
-		}
-		float k = 40 / EnemyNumber;
-		for (int i = 0; i < EnemyNumber; i++) {
-			CreateEnemy ((i * k) - 17, EnemyNumber % 2);
-		}
-		WaveNumber++;
-		prevEnemyNumber = EnemyNumber;
-	}
+    private void NextWave() {
+        EnemyNumberDecimal = -(EnemyCoeffiecient / WaveNumber) + MaximumEnemies;
+        EnemyNumber = (int)Mathf.Round(EnemyNumberDecimal);
+        if (EnemyNumber == prevEnemyNumber) {
+            EnemyNumber -= 1;
+        }
+        float k = 0;
+        if (EnemyNumber == 0) {
+            k = 17;
+        }
+        else {
+            k = 40 / EnemyNumber;
+        }
+        for (int i = 1; i < EnemyNumber; i++) {
+            CreateEnemy((i * k) - 17, EnemyNumber % 2);
+        }
+        WaveNumber++;
+        prevEnemyNumber = EnemyNumber;
+    }
 
     public IEnumerator Respawn() {
         PlayerHealth playerHealth = GameObject.Find("GameManager").GetComponent<PlayerHealth>();
@@ -75,7 +81,7 @@ public class GameManager_Jason : MonoBehaviour {
         yield return new WaitForSeconds(3f); // wait 3 seconds before respawning
 
         Time.timeScale = 1f;
-        m_Player = Instantiate(Player, PlayerSpawn.position, PlayerSpawn.rotation) as GameObject;
+        Instantiate(Player, PlayerSpawn.position, PlayerSpawn.rotation);
         playerHealth.m_CurrentHealth = 200f;
     }
 

@@ -24,6 +24,8 @@ GameObject:
   - 114: {fileID: 114000010409657304}
   - 114: {fileID: 114000014250969184}
   - 114: {fileID: 114000010631179582}
+  - 114: {fileID: 114000010706839486}
+  - 114: {fileID: 114000012892183222}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -100,8 +102,19 @@ MonoBehaviour:
   m_ScoreText: {fileID: 0}
   m_HighestScoreText: {fileID: 0}
   m_Score: 0
-  m_NewRecordColor: {r: 1, g: 1, b: 0.7254902, a: 1}
+  m_NewRecordColor: {r: 1, g: 0.78275865, b: 0.25, a: 1}
   m_NewRecordScoreColor: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &114000010706839486
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013223600546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49ae472f7c8012d4b8f1c79d2ea1d199, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000010783281278
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -113,7 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 038007b77e36f435b8ba187bf01b9190, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeTime: 1
+  fadeTime: 2
 --- !u!114 &114000012784500342
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -125,8 +138,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b61c430cb6ca80741b101deacab997ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SpawnRate: 5
-  m_InitialSpawn: 1
+  m_SpawnRate: 10
+  m_InitialSpawn: 0
   OriginalSpawn: {fileID: 4000010875074768}
   Enemy: {fileID: 5484516, guid: 020b6ffa7f3c6fe46b27f83805d4c267, type: 2}
   Player: {fileID: 5403420, guid: 58b30208820d39541af0398f29f1351a, type: 2}
@@ -136,6 +149,17 @@ MonoBehaviour:
   MaximumEnemies: 15
   scale: 0
   starter: 0
+--- !u!114 &114000012892183222
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013223600546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49ae472f7c8012d4b8f1c79d2ea1d199, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000014250969184
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -158,3 +182,5 @@ MonoBehaviour:
   m_ZeroHealthTextColor: {r: 1, g: 0.020689659, b: 0, a: 1}
   m_HealthText: {fileID: 0}
   m_LivesText: {fileID: 0}
+  m_RespawnText: {fileID: 0}
+  m_CurrentHealth: 200
