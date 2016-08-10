@@ -24,7 +24,8 @@ public class GameManager_Jason : MonoBehaviour {
 	private int prevEnemyNumber;
 	// Use this for initialization
 	void Start () {
-        Physics.IgnoreLayerCollision(8, 9);
+        Physics.IgnoreLayerCollision(8, 9); // ignore collisions between enemies and enemy bullets
+        Physics.IgnoreLayerCollision(9, 10); // ignore collisions between player and enemy bullets
         Instantiate(Player, PlayerSpawn.position, PlayerSpawn.rotation);
 
 		//for (int i = 0; i < m_InitialSpawn; i++){
@@ -58,13 +59,13 @@ public class GameManager_Jason : MonoBehaviour {
         }
         float k = 0;
         if (EnemyNumber == 0) {
-            k = 17;
+            k = -10;
         }
         else {
             k = 40 / EnemyNumber;
         }
         for (int i = 0; i < EnemyNumber; i++) {
-            CreateEnemy((i * k) - 17, EnemyNumber % 2);
+            CreateEnemy((i * k) - 10, EnemyNumber % 2);
         }
         WaveNumber++;
         prevEnemyNumber = EnemyNumber;

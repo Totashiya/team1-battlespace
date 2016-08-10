@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour {
 	}
 	
 	void FixedUpdate () {
+        m_Rigidbody.Sleep();
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
 
