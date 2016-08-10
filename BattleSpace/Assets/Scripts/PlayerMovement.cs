@@ -21,8 +21,9 @@ public class PlayerMovement : MonoBehaviour {
         float vertical = Input.GetAxisRaw("Vertical");
 
         Move(horizontal, vertical);
-
-
+		if (Mathf.Abs(horizontal) + Mathf.Abs(vertical) == 0) {
+			m_Rigidbody.Sleep ();
+		}
 		/*
 		pos.x = Mathf.Clamp (pos.x, 0.03f, 0.97f);
 

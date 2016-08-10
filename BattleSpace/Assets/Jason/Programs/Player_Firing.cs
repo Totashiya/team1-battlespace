@@ -7,7 +7,7 @@ public class Player_Firing : MonoBehaviour {
 	public Rigidbody m_Shell;
 	public Rigidbody m_Player;
 	public Transform m_FireTransform;
-    public float fireRate = 0.5f;
+    public float fireRate = 0.2f;
 	public float m_LaunchForce = 30f; 
 	public float m_MaxChargeTime = 0.75f;
 

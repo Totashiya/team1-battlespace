@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.05598923, g: 0.048733354, b: 0.045373738, a: 1}
+  m_IndirectSpecularColor: {r: 0.05596926, g: 0.0487988, b: 0.045347363, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -158,11 +158,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 40898208}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c784da77d8d983e42bf936b3658ea753, type: 3}
+  m_Script: {fileID: 11500000, guid: 43e9ed231fc3d435a8a89850497c2e9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minEarned: 50
-  maxEarned: 1000
 --- !u!23 &40898211
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -251,11 +249,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 115898514}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c784da77d8d983e42bf936b3658ea753, type: 3}
+  m_Script: {fileID: 11500000, guid: 43e9ed231fc3d435a8a89850497c2e9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minEarned: 50
-  maxEarned: 1000
 --- !u!23 &115898517
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -776,11 +772,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 402398273}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c784da77d8d983e42bf936b3658ea753, type: 3}
+  m_Script: {fileID: 11500000, guid: 43e9ed231fc3d435a8a89850497c2e9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minEarned: 50
-  maxEarned: 1000
 --- !u!1 &412467832
 GameObject:
   m_ObjectHideFlags: 0
@@ -2844,16 +2838,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114000010631179582, guid: e522c7cb94d634b9790379b66aa75fca,
-        type: 2}
-      propertyPath: m_ScoreText
-      value: 
-      objectReference: {fileID: 1766065478}
-    - target: {fileID: 114000010631179582, guid: e522c7cb94d634b9790379b66aa75fca,
-        type: 2}
-      propertyPath: m_HighestScoreText
-      value: 
-      objectReference: {fileID: 1058745327}
     - target: {fileID: 114000014250969184, guid: e522c7cb94d634b9790379b66aa75fca,
         type: 2}
       propertyPath: m_Slider
@@ -2879,11 +2863,16 @@ Prefab:
       propertyPath: m_RespawnText
       value: 
       objectReference: {fileID: 1912343483}
-    - target: {fileID: 114000012784500342, guid: e522c7cb94d634b9790379b66aa75fca,
+    - target: {fileID: 114000010631179582, guid: e522c7cb94d634b9790379b66aa75fca,
         type: 2}
-      propertyPath: EnemyCoeffiecient
-      value: 1000
-      objectReference: {fileID: 0}
+      propertyPath: m_ScoreText
+      value: 
+      objectReference: {fileID: 1766065478}
+    - target: {fileID: 114000010631179582, guid: e522c7cb94d634b9790379b66aa75fca,
+        type: 2}
+      propertyPath: m_HighestScoreText
+      value: 
+      objectReference: {fileID: 1058745327}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e522c7cb94d634b9790379b66aa75fca, type: 2}
   m_IsPrefabParent: 0
@@ -2904,7 +2893,6 @@ GameObject:
   - 33: {fileID: 1137621195}
   - 65: {fileID: 1137621194}
   - 23: {fileID: 1137621193}
-  - 114: {fileID: 1137621196}
   - 114: {fileID: 1137621197}
   m_Layer: 0
   m_Name: RearBulletDestroyWall
@@ -2974,19 +2962,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1137621191}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1137621196
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1137621191}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c784da77d8d983e42bf936b3658ea753, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minEarned: 50
-  maxEarned: 1000
 --- !u!114 &1137621197
 MonoBehaviour:
   m_ObjectHideFlags: 0

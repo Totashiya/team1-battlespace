@@ -155,7 +155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e33800d25e46254087f16db6065f6d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_moveSpeed: 10
+  m_moveSpeed: 16
   leftBorder: 0.05
   rightBorder: 0.95
   topBorder: 0.9
@@ -175,7 +175,7 @@ MonoBehaviour:
   m_Shell: {fileID: 5444970, guid: d30c933f849b38a4a87f7fce0a186e07, type: 2}
   m_Player: {fileID: 5403420}
   m_FireTransform: {fileID: 407232}
-  fireRate: 0.7
+  fireRate: 0.2
   m_LaunchForce: 60
   m_MaxChargeTime: 0.75
 --- !u!136 &13667188
