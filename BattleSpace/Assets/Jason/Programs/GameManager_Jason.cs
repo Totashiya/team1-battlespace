@@ -16,6 +16,7 @@ public class GameManager_Jason : MonoBehaviour {
 	public float MaximumEnemies;
 	public int scale;
 	public int starter;
+	public int StartingWave;
 
 	private float target;
 	private float EnemyNumberDecimal;
@@ -32,7 +33,7 @@ public class GameManager_Jason : MonoBehaviour {
 		//	CreateEnemy(i-m_InitialSpawn/2);
 		//}
 		target = m_SpawnRate;
-		WaveNumber = 70;
+		WaveNumber = StartingWave;
         NextWave();
 	}
 
@@ -57,15 +58,16 @@ public class GameManager_Jason : MonoBehaviour {
             EnemyNumber -= 1;
         }
         float k = 0;
-        if (EnemyNumber == 0) {
-            k = -10;
+        if (EnemyNumber <= 1) {
+			CreateEnemy (0f, 0f);
         }
         else {
-            k = 40 / EnemyNumber;
+            k = 36 / EnemyNumber;
+			for (int i = 0; i < EnemyNumber; i++) {
+				CreateEnemy((i * k) - 13, EnemyNumber % 2);
+			}
         }
-        for (int i = 0; i < EnemyNumber; i++) {
-            CreateEnemy((i * k) - 10, EnemyNumber % 2);
-        }
+        
         WaveNumber++;
         prevEnemyNumber = EnemyNumber;
     }
