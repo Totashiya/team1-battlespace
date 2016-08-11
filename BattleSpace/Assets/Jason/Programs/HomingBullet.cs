@@ -5,7 +5,7 @@ public class HomingBullet : MonoBehaviour {
 
 	public float m_Speed;
     public int m_Damage = 10; // how much damage the bullet does to the player
-
+	public Vector3 CompVector;
     public GameObject hitExplosion;
 
     bool isColliding = false; // boolean to prevent multiple simultaneous collisions
@@ -33,10 +33,12 @@ public class HomingBullet : MonoBehaviour {
 		}
 		try{
 			m_Player = GameObject.Find ("PlayerCapsule(Clone)").transform;
+			transform.LookAt (m_Player.position);
 		}
 		catch{
 
 		}
+		transform.Rotate (CompVector);
 	}
     void OnTriggerEnter(Collider other) {
         PlayerHealth playerHealth = GameObject.Find("GameManager").GetComponent<PlayerHealth>();
