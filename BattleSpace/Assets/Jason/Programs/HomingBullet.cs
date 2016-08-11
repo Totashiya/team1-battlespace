@@ -9,19 +9,34 @@ public class HomingBullet : MonoBehaviour {
     public GameObject hitExplosion;
 
     bool isColliding = false; // boolean to prevent multiple simultaneous collisions
+	private Transform m_Player;
 
 	void Start () {
         GetComponent<AudioSource>().Play();
+		try{
+			m_Player = GameObject.Find ("PlayerCapsule(Clone)").transform;
+		}
+		catch{
+
+		}
 	}
 	
 	// Update is called once per frame
 	void Update () {
         isColliding = false;
-		/*
+
 		float m_Step = m_Speed * Time.deltaTime;
+		try{
 		transform.position = Vector3.MoveTowards (transform.position,m_Player.position, m_Speed);
-		transform.LookAt (m_Player.position);
-		*/
+		}
+		catch{
+		}
+		try{
+			m_Player = GameObject.Find ("PlayerCapsule(Clone)").transform;
+		}
+		catch{
+
+		}
 	}
     void OnTriggerEnter(Collider other) {
         PlayerHealth playerHealth = GameObject.Find("GameManager").GetComponent<PlayerHealth>();
