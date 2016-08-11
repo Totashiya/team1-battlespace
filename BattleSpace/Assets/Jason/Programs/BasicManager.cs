@@ -37,6 +37,13 @@ public class BasicManager: MonoBehaviour{
 			shellInstance.velocity = m_CurrentLaunchForce * m_FireTransform.up;
 			m_FireFlag = false;
 		}
+		if (Mathf.Abs (transform.position.x) >= 0) {
+			try{
+			transform.LookAt (GameObject.Find ("PlayerCapsule(Clone)").transform);
+			}
+			catch(NullReferenceException) {
+			}
+		}
 	}
 }
 
