@@ -25,6 +25,7 @@ public class GameManager_Jason : MonoBehaviour {
 	private int prevEnemyNumber;
 
 	void Start () {
+        Time.timeScale = 1.0f;
         Physics.IgnoreLayerCollision(8, 9); // ignore collisions between enemies and enemy bullets
         Physics.IgnoreLayerCollision(9, 10); // ignore collisions between player and enemy bullets
         Instantiate(Player, PlayerSpawn.position, PlayerSpawn.rotation);

@@ -76,6 +76,8 @@ public class PlayerHealth : MonoBehaviour {
     void Dead() {
         Explode();
         if(m_Lives <= 1) {
+            GameObject.Find("HUD").SetActive(false);
+
             Destroy(GameObject.Find("PlayerCapsule(Clone)"));
             StartCoroutine(gameManager.GameOver());
         }

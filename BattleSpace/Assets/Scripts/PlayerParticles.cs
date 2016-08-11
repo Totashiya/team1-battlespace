@@ -3,10 +3,12 @@ using System.Collections;
 
 public class PlayerParticles : MonoBehaviour {
 
-    public GameObject m_EngineParticles;
+    public GameObject m_LeftThrusterParticles;
+    public GameObject m_RightThrusterParticles;
     public GameObject m_DamagedParticles;
 
-    ParticleSystem engine;
+    ParticleSystem leftThruster;
+    ParticleSystem rightThruster;
 
     float m_CurrentHealth;
     float m_DamagedHealth;
@@ -15,8 +17,11 @@ public class PlayerParticles : MonoBehaviour {
     bool m_isReverse;
 
 	void Start () {
-        m_EngineParticles.SetActive(true);
-        engine = m_EngineParticles.GetComponent<ParticleSystem>();
+        m_LeftThrusterParticles.SetActive(true);
+        leftThruster = m_LeftThrusterParticles.GetComponent<ParticleSystem>();
+
+        m_RightThrusterParticles.SetActive(true);
+        rightThruster = m_RightThrusterParticles.GetComponent<ParticleSystem>();
 
         m_DamagedParticles.SetActive(false);
     }
@@ -24,7 +29,7 @@ public class PlayerParticles : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         PlayerHealth playerHealth = GameObject.Find("GameManager").GetComponent<PlayerHealth>();
-        m_isForward = gameObject.GetComponent<PlayerMovement>().isForward;
+
         m_isReverse = gameObject.GetComponent<PlayerMovement>().isReverse;
 
         m_CurrentHealth = playerHealth.m_CurrentHealth;
@@ -37,8 +42,10 @@ public class PlayerParticles : MonoBehaviour {
             m_DamagedParticles.SetActive(false);
         }
 
-        var em_engine = engine.emission;
+        var em_leftThruster = leftThruster.emission;
+        var em_rightThruster = rightThruster.emission;
 
-        em_engine.enabled = !m_isReverse && m_isForward;
+        em_leftThruster.enabled = !m_isReverse;
+        em_rightThruster.enabled = !m_isReverse;
 	}
 }

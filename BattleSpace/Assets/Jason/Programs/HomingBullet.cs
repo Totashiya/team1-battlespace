@@ -34,7 +34,9 @@ public class HomingBullet : MonoBehaviour {
             GameObject HitExplosion = Instantiate(hitExplosion, gameObject.transform.position, gameObject.transform.rotation) as GameObject;
 
             GetComponent<MeshRenderer>().enabled = false;
-            GetComponent<Rigidbody>().Sleep();
+            transform.position = new Vector3(1000, 0, 0);
+
+            other.gameObject.GetComponent<AudioSource>().Play();
 
             Destroy(gameObject, GetComponent<AudioSource>().clip.length);
             Destroy(HitExplosion, HitExplosion.GetComponent<ParticleSystem>().duration);
