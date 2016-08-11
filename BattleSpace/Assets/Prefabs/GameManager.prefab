@@ -25,7 +25,6 @@ GameObject:
   - 114: {fileID: 114000014250969184}
   - 114: {fileID: 114000010631179582}
   - 114: {fileID: 114000010706839486}
-  - 114: {fileID: 114000012892183222}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -126,7 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 038007b77e36f435b8ba187bf01b9190, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeTime: 2
+  fadeTime: 1
 --- !u!114 &114000012784500342
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -149,17 +148,6 @@ MonoBehaviour:
   MaximumEnemies: 15
   scale: 0
   starter: 0
---- !u!114 &114000012892183222
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013223600546}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49ae472f7c8012d4b8f1c79d2ea1d199, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114000014250969184
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -173,6 +161,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 114000010783281278}
   m_StartingHealth: 200
+  m_LowHealth: 80
   m_Lives: 3
   m_Slider: {fileID: 0}
   m_FillImage: {fileID: 0}
@@ -183,4 +172,6 @@ MonoBehaviour:
   m_HealthText: {fileID: 0}
   m_LivesText: {fileID: 0}
   m_RespawnText: {fileID: 0}
+  ExplosionParticles: {fileID: 1000010884813578, guid: ff7b73495f847dd40858900172a90976,
+    type: 2}
   m_CurrentHealth: 200

@@ -22,7 +22,7 @@ public class GameManager_Jason : MonoBehaviour {
 	private int EnemyNumber;
 	private int WaveNumber;
 	private int prevEnemyNumber;
-	// Use this for initialization
+
 	void Start () {
         Physics.IgnoreLayerCollision(8, 9); // ignore collisions between enemies and enemy bullets
         Physics.IgnoreLayerCollision(9, 10); // ignore collisions between player and enemy bullets
@@ -36,9 +36,8 @@ public class GameManager_Jason : MonoBehaviour {
         NextWave();
 	}
 
-	// Update is called once per frame
 	void Update () {
-		print (Time.time);
+		//print (Time.time);
 		if (Time.time > target) {
 			NextWave ();
 			target = Time.time + m_SpawnRate;
@@ -74,7 +73,7 @@ public class GameManager_Jason : MonoBehaviour {
     public IEnumerator Respawn() {
         PlayerHealth playerHealth = GameObject.Find("GameManager").GetComponent<PlayerHealth>();
 
-        Debug.Log("Respawning");
+        //Debug.Log("Respawning");
         Destroy(GameObject.Find("PlayerCapsule(Clone)"));
 
         Time.timeScale = 0.75f; // make everything slow before respawning

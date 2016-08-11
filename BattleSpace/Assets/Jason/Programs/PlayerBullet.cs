@@ -11,14 +11,22 @@ public class PlayerBullet : MonoBehaviour {
 
     bool isColliding = false; // boolean to prevent multiple simultaneous collisions
 
-	int earned;
+    int earned;
 
-    // Use this for initialization
+    public Font earnedTextFont;
+
+    GameObject HUD;
+    GameObject EarnedTextObject;
+
+    public GameObject EarnedTextPrefab;
+
+    public GameObject EnemyExplosion;
+
     void Start () {
+        HUD = GameObject.Find("HUD");
+        gameObject.GetComponent<AudioSource>().Play();
+    }
 
-	}
-
-	// Update is called once per frame
 	void Update () {
         isColliding = false;	
 	}
@@ -41,11 +49,34 @@ public class PlayerBullet : MonoBehaviour {
 			// print ("Player earns " + earned.ToString());
 
             playerScore.AddScore(earned);
+            ShowEarned(earned, other.gameObject);
+
+            Instantiate(EnemyExplosion, other.transform.position, other.transform.rotation);
             Destroy(other.gameObject);
 
+            GetComponent<MeshRenderer>().enabled = false;
+            GetComponent<Rigidbody>().Sleep();
 
+            Destroy(gameObject, GetComponent<AudioSource>().clip.length);
         }
 	}
+
+    void ShowEarned(int earned, GameObject worldObject) {
+        EarnedTextObject = Instantiate(EarnedTextPrefab);
+        EarnedTextObject.transform.SetParent(HUD.transform);
+
+        Text earnedText = EarnedTextObject.GetComponent<Text>();
+        earnedText.text = "+" + earned.ToString();
+
+        RectTransform CanvasRect = HUD.GetComponent<RectTransform>();
+
+        Vector2 ViewportPosition = Camera.main.WorldToViewportPoint(worldObject.transform.position);
+        Vector2 WorldObject_ScreenPosition = new Vector2(
+            ((ViewportPosition.x * CanvasRect.sizeDelta.x) - (CanvasRect.sizeDelta.x * 0.5f)),
+            ((ViewportPosition.y * CanvasRect.sizeDelta.y) - (CanvasRect.sizeDelta.y * 0.5f)));
+
+        EarnedTextObject.GetComponent<RectTransform>().anchoredPosition = WorldObject_ScreenPosition;
+    }
 
 	float map(float value, float low1, float high1, float low2, float high2) {
 		return (low2 + (value - low1) * (high2 - low2) / (high1 - low1));

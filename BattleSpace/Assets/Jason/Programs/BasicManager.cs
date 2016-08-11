@@ -12,7 +12,7 @@ public class BasicManager: MonoBehaviour{
 	public Rigidbody m_Shell;
 	public Transform m_FireTransform;
 	public int m_CurrentLaunchForce;
-	//public GameObject m_EarnedText; See OnDestroy() below
+    public ParticleSystem EnemyExplosion;
 
 	private float m_TotalFireTime;
 	private bool m_FireFlag;
@@ -38,17 +38,5 @@ public class BasicManager: MonoBehaviour{
 			m_FireFlag = false;
 		}
 	}
-
-	/*
-	 * Was planning to make the earned amount of points appear at the position
-	 * of the enemy when it gets shot. 
-	 * For now, that code is located at PlayerBullet.cs and will remain there
-	 * unless if the player one day can kill multiple enemies at the same time.
-	 * 
-	void OnDestroy() {
-		print ("Enemy destroyed!");
-		Instantiate (m_EarnedText);
-	}
-	*/
 }
 

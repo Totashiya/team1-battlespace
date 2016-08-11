@@ -7,6 +7,7 @@ public class PlayerHealth : MonoBehaviour {
 	public GameManager gameManager;
 
     public float m_StartingHealth = 200f;
+    public float m_LowHealth = 80f; // when the player reaches this hp flames will start to appear
     public int m_Lives = 3;
 
     public Slider m_Slider;
@@ -25,6 +26,11 @@ public class PlayerHealth : MonoBehaviour {
     Text m_LivesValue;
 
     public GameObject m_RespawnText;
+
+    Transform m_Player;
+
+    public GameObject ExplosionParticles;
+    //ParticleSystem explosion;
 
 	public float m_CurrentHealth;
 
@@ -61,14 +67,16 @@ public class PlayerHealth : MonoBehaviour {
     }
 
     void Update() {
-        if(Input.GetKeyDown(KeyCode.Q)) {
+        if (Input.GetKeyDown(KeyCode.Q)) {
             Dead();
         }
         SetHealthUI();
     }
 
     void Dead() {
-        if(m_Lives < 1) {
+        Explode();
+        if(m_Lives <= 1) {
+            Destroy(GameObject.Find("PlayerCapsule(Clone)"));
             StartCoroutine(gameManager.GameOver());
         }
         else {
@@ -87,11 +95,18 @@ public class PlayerHealth : MonoBehaviour {
         if(m_CurrentHealth <= 0) {
             Dead();
         }
+        
 	}
 
     IEnumerator RespawnTimer() {
         m_RespawnText.SetActive(true);
         yield return new WaitForSeconds(3f);
         m_RespawnText.SetActive(false);
+    }
+
+    void Explode() {
+        print("Player exploded");
+        m_Player = GameObject.Find("PlayerCapsule(Clone)").GetComponent<Transform>();
+        Instantiate(ExplosionParticles, m_Player.position, m_Player.rotation);
     }
 }
