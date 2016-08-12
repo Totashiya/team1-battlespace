@@ -366,13 +366,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_FireRate: 6
-  m_MoveRate: 10
+  m_MoveRate: 50
   m_Self: {fileID: 5456286}
   m_Shell: {fileID: 54000011311723204, guid: d30c933f849b38a4a87f7fce0a186e07, type: 2}
   m_FireTransform: {fileID: 469628}
   m_CurrentLaunchForce: 1
   EnemyExplosion: {fileID: 198000013817925120, guid: 7f5ba41cd11a46046867c42c363e4bd5,
     type: 2}
+  stopPosition: -3
 --- !u!136 &136000011776382242
 CapsuleCollider:
   m_ObjectHideFlags: 1

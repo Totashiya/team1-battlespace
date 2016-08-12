@@ -10,6 +10,8 @@ public class MissileAI : MonoBehaviour {
 	public int m_CurrentLaunchForce;
 	public ParticleSystem EnemyExplosion;
 
+    public float stopPosition = -3;
+
 	private float m_TotalFireTime;
 	private bool m_FireFlag;
 
@@ -33,6 +35,10 @@ public class MissileAI : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+        /*if(gameObject.transform.position.z >= stopPosition) {
+            GetComponent<Rigidbody>().velocity = Vector3.zero;
+            GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+        }*/
 		if (Time.time >= m_TotalFireTime) {
 			m_FireFlag = true;
 			m_TotalFireTime = Time.time + m_FireRate;

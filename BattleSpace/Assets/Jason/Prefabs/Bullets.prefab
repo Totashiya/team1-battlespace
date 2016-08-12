@@ -249,7 +249,7 @@ GameObject:
   - 82: {fileID: 82000012672525180}
   m_Layer: 11
   m_Name: HomingMissle
-  m_TagString: EnemyBullets
+  m_TagString: EnemyMissles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -605,7 +605,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 277458332df2e6d4f9c3c437d911e817, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 0.6
   Loop: 0
   Mute: 0
@@ -815,6 +815,8 @@ MonoBehaviour:
   EarnedTextPrefab: {fileID: 1000014220687602, guid: f8aa6baff9147df48819adbd02e490db,
     type: 2}
   EnemyExplosion: {fileID: 1000012659826506, guid: 7f5ba41cd11a46046867c42c363e4bd5,
+    type: 2}
+  MissileExplosion: {fileID: 1000013191016570, guid: ae6336773e6be5641ac9b9989e2e51f6,
     type: 2}
 --- !u!198 &198000013029713500
 ParticleSystem:

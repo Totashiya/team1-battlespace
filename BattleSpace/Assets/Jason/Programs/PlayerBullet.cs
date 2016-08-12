@@ -21,9 +21,13 @@ public class PlayerBullet : MonoBehaviour {
     public GameObject EarnedTextPrefab;
 
     public GameObject EnemyExplosion;
+    public GameObject MissileExplosion;
+
+    PlayerScore playerScore;
 
     void Start () {
         HUD = GameObject.Find("HUD");
+        playerScore = GameObject.Find("GameManager").GetComponent<PlayerScore>();
         gameObject.GetComponent<AudioSource>().Play();
     }
 
@@ -32,7 +36,6 @@ public class PlayerBullet : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider other) {
-        PlayerScore playerScore = GameObject.Find("GameManager").GetComponent<PlayerScore>();
 
         if (isColliding) return;
         else if (other.CompareTag("Enemies")) {
@@ -58,6 +61,22 @@ public class PlayerBullet : MonoBehaviour {
             GetComponent<Rigidbody>().Sleep();
 
             Destroy(gameObject, GetComponent<AudioSource>().clip.length);
+        }
+
+        else if(other.gameObject.name == "HomingMissle(Clone)") {
+            other.GetComponent<AudioSource>().Play();
+            playerScore.AddScore(300);
+            ShowEarned(300, other.gameObject);
+
+            GameObject m_MissleExplosion = Instantiate(MissileExplosion, other.transform.position, other.transform.rotation) as GameObject;
+
+            Destroy(other.gameObject);
+
+            GetComponent<MeshRenderer>().enabled = false;
+            GetComponent<Rigidbody>().Sleep();
+
+            Destroy(gameObject, other.GetComponent<AudioSource>().clip.length);
+            Destroy(m_MissleExplosion, m_MissleExplosion.GetComponent<ParticleSystem>().duration);
         }
 	}
 

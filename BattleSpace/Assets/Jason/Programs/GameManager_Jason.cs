@@ -54,11 +54,11 @@ public class GameManager_Jason : MonoBehaviour {
 		Vector3 Compensation = new Vector3 (x, 0f, y);
 		Vector3 CreatedEnemy = OriginalSpawn.position + Compensation;
 		if (EnemyNumber > 5) {
-			if (Mathf.Abs (x) > 10 && Mathf.Abs (x) < 15) {
+			if (Mathf.Abs (x) > 8 && Mathf.Abs (x) < 13) {
                 //print("Spawned FlankerEnemy");
                 Instantiate(FlankerEnemy, CreatedEnemy, OriginalSpawn.rotation);
 			}
-			if (Mathf.Abs (x) >= 15) {
+			if (Mathf.Abs (x) >= 12) {
                 //print("Spawned MissileEnemy");
                 Instantiate(MissileEnemy, CreatedEnemy, OriginalSpawn.rotation);
 			}
