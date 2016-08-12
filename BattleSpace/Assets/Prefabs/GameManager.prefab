@@ -25,6 +25,7 @@ GameObject:
   - 114: {fileID: 114000014250969184}
   - 114: {fileID: 114000010631179582}
   - 114: {fileID: 114000010706839486}
+  - 82: {fileID: 82000010555302526}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -74,6 +75,80 @@ Transform:
   - {fileID: 4000010062434912}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!82 &82000010555302526
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013223600546}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: a45c4cf390df04d708a31fead36cc356, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.8
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!114 &114000010409657304
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -140,7 +215,9 @@ MonoBehaviour:
   m_SpawnRate: 5
   m_InitialSpawn: 0
   OriginalSpawn: {fileID: 4000010875074768}
-  Enemy: {fileID: 5484516, guid: 020b6ffa7f3c6fe46b27f83805d4c267, type: 2}
+  BasicEnemy: {fileID: 5484516, guid: 020b6ffa7f3c6fe46b27f83805d4c267, type: 2}
+  MissileEnemy: {fileID: 5456286, guid: c88f148445b601e469e511cd79b447ef, type: 2}
+  FlankerEnemy: {fileID: 5443040, guid: 7644929b46b37314fa326a3fe864c7d6, type: 2}
   Player: {fileID: 5403420, guid: 58b30208820d39541af0398f29f1351a, type: 2}
   TacticalReturn: {fileID: 0}
   PlayerSpawn: {fileID: 4000010062434912}
