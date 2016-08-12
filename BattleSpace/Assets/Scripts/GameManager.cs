@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour {
     int finalScore;
 
 	public IEnumerator GameOver() {
+        GetComponent<AudioSource>().Stop();
         Time.timeScale = 0.5f; // slow down time as the screen dramatically darkens
         yield return new WaitForSeconds(1);
         // Store the final score and then fade into the game over screen

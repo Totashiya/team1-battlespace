@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.05598923, g: 0.048733354, b: 0.045373738, a: 1}
+  m_IndirectSpecularColor: {r: 0.05596926, g: 0.048798926, b: 0.045347854, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -835,6 +835,71 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013292521572, guid: f9275dea095b6e649b592b266e44484a, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000014151137778, guid: f9275dea095b6e649b592b266e44484a,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000014151137778, guid: f9275dea095b6e649b592b266e44484a,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000014151137778, guid: f9275dea095b6e649b592b266e44484a,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0.5132276
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013653676014, guid: f9275dea095b6e649b592b266e44484a,
+        type: 2}
+      propertyPath: m_Value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013653676014, guid: f9275dea095b6e649b592b266e44484a,
+        type: 2}
+      propertyPath: m_Size
+      value: 0.5132276
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011096636736, guid: f9275dea095b6e649b592b266e44484a,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000012348288116, guid: f9275dea095b6e649b592b266e44484a,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 183.99998
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000012348288116, guid: f9275dea095b6e649b592b266e44484a,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 756
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012461825782, guid: f9275dea095b6e649b592b266e44484a,
+        type: 2}
+      propertyPath: m_Text
+      value: "INCOMING MESSAGE:\n-----------------------------------\n<size=30>Welcome
+        to BattleSpace!\nIn this game, you must try to survive as long as you can
+        against the alien space force. Their army uses one basic space ship design,
+        but be careful fighting them- You have only 3 ships, while they have hundreds,
+        maybe thousands. Hopefully, you will fare better than our previous pilots...\n\nGood
+        luck!\n\tYour employers</size>\n\n--------END OF MESSAGE---------\n<color=white>\n<b>Controls</b>\nFire:
+        Left-Click or Spacebar\nMove: WASD or Arrow keys\nBrake: Left Shift\n</color>"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012461825782, guid: f9275dea095b6e649b592b266e44484a,
+        type: 2}
+      propertyPath: m_FontData.m_LineSpacing
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013653676014, guid: f9275dea095b6e649b592b266e44484a,
+        type: 2}
+      propertyPath: m_Direction
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f9275dea095b6e649b592b266e44484a, type: 2}

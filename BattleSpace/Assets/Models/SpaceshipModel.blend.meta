@@ -1,22 +1,15 @@
 fileFormatVersion: 2
-guid: 5b4412e9f3734fe45828193e3ade63b5
-timeCreated: 1470791809
+guid: 793facfee9c703a4d8537aceccd887e7
+timeCreated: 1470881166
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: Cube_003
-    100002: //RootNode
-    100004: Icosphere
-    400000: Cube_003
-    400002: //RootNode
-    400004: Icosphere
-    2300000: Cube_003
-    2300002: Icosphere
-    3300000: Cube_003
-    3300002: Icosphere
-    4300000: Icosphere
-    4300002: Cube_003
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: characterMesh
     7400000: Default Take
     9500000: //RootNode
   materials:

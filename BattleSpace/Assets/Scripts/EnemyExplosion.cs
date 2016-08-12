@@ -5,6 +5,6 @@ public class EnemyExplosion : MonoBehaviour {
 
 	void Start () {
         GetComponent<AudioSource>().Play();
-        Destroy(gameObject, GetComponent<AudioSource>().clip.length);
+        Destroy(gameObject, GetComponent<ParticleSystem>().duration);
 	}
 }

@@ -11,7 +11,9 @@ public class PlayerCollide : MonoBehaviour {
             Debug.Log("Player collided with enemy");
             playerHealth.takeDamage(20);
             GameObject CollisionExplosion = Instantiate(EnemyCollisionParticles, col.gameObject.transform.position, col.gameObject.transform.rotation) as GameObject;
-            Destroy(col.gameObject);
+            col.gameObject.GetComponent<AudioSource>().Play();
+            col.gameObject.transform.position = new Vector3(1000, 0, 0);
+            Destroy(col.gameObject, col.gameObject.GetComponent<AudioSource>().clip.length);
             Destroy(CollisionExplosion, EnemyCollisionParticles.GetComponent<ParticleSystem>().duration);
         }
     }

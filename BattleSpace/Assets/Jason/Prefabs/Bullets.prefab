@@ -506,7 +506,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minEarned: 50
-  maxEarned: 1000
+  maxEarned: 500
   earnedTextFont: {fileID: 12800000, guid: 7a1fa3352934843019382e9e68c32aad, type: 3}
   EarnedTextPrefab: {fileID: 1000014220687602, guid: f8aa6baff9147df48819adbd02e490db,
     type: 2}
