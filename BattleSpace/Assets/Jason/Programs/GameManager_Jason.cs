@@ -8,7 +8,9 @@ public class GameManager_Jason : MonoBehaviour {
     public float m_SpawnRate;
 	public int m_InitialSpawn;
 	public Transform OriginalSpawn;
-	public Rigidbody Enemy;
+	public Rigidbody BasicEnemy;
+	public Rigidbody MissileEnemy;
+	public Rigidbody FlankerEnemy;
 	public Rigidbody Player;
 	public Transform TacticalReturn;
 	public Transform PlayerSpawn;
@@ -46,10 +48,19 @@ public class GameManager_Jason : MonoBehaviour {
 		}
 	}
 
-	private void CreateEnemy(float x, float y){
+	private void CreateEnemy(float x, float y, int EnemyNumber){
 		Vector3 Compensation = new Vector3 (x, 0f, y);
 		Vector3 CreatedEnemy = OriginalSpawn.position + Compensation;
-		Instantiate(Enemy,CreatedEnemy, OriginalSpawn.rotation);
+		if (EnemyNumber > 5) {
+			if (Mathf.Abs (x) > 10 && Mathf.Abs (x) < 15) {
+				GameObject CreatEnemy = Instantiate (FlankerEnemy, CreatedEnemy, OriginalSpawn.rotation) as GameObject;
+			}
+			if (Mathf.Abs (x) >= 15) {
+				GameObject CreatEnemy = Instantiate (MissileEnemy, CreatedEnemy, OriginalSpawn.rotation) as GameObject;
+			}
+		} else {
+			GameObject CreatEnemy = Instantiate (BasicEnemy, CreatedEnemy, OriginalSpawn.rotation) as GameObject;
+		}
 	}
 
     private void NextWave() {
@@ -61,12 +72,12 @@ public class GameManager_Jason : MonoBehaviour {
         }
         float k = 0;
         if (EnemyNumber <= 1) {
-			CreateEnemy (0f, 0f);
+			CreateEnemy (0f, 0f,EnemyNumber);
         }
         else {
             k = 36 / EnemyNumber;
 			for (int i = 0; i < EnemyNumber; i++) {
-				CreateEnemy((i * k) - 13, EnemyNumber % 2);
+				CreateEnemy((i * k) - 13, EnemyNumber % 2,EnemyNumber);
 			}
         }
         

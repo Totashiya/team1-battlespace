@@ -42,8 +42,7 @@ GameObject:
   - 65: {fileID: 6540766}
   - 23: {fileID: 2346128}
   - 54: {fileID: 5456286}
-  - 114: {fileID: 11488098}
-  - 114: {fileID: 11404802}
+  - 114: {fileID: 114000010356844620}
   m_Layer: 0
   m_Name: Enemy Hit Zero
   m_TagString: Untagged
@@ -101,17 +100,20 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 315cf774b7ff8714f94055ab58f145e9, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
   m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_SelectedWireframeHidden: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -152,37 +154,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &11404802
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 186984}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bef198b289f524d4b8381b8e7967d4c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Player: {fileID: 5403420, guid: 1c85748afb8a2164fa09bc033cbbe330, type: 2}
-  scalefactor: 10
-  m_ShieldNumber: 0
-  m_TotalShielders: 0
-  m_FireSignal: 0
-  m_Self: {fileID: 5456286}
-  m_Instance: {fileID: 0}
---- !u!114 &11488098
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 186984}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ed4a0e82885eef4c9600f56cbe692e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  self: {fileID: 186984}
-  HitsEndured: 2
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -194,3 +165,22 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 177678}
   m_IsPrefabParent: 1
+--- !u!114 &114000010356844620
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 186984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 192b84fc090bd9d46b57f6322dad5ed4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FireRate: 5
+  m_MoveRate: 5
+  m_Self: {fileID: 5456286}
+  m_Shell: {fileID: 54000011311723204, guid: d30c933f849b38a4a87f7fce0a186e07, type: 2}
+  m_FireTransform: {fileID: 469628}
+  m_CurrentLaunchForce: 1
+  EnemyExplosion: {fileID: 198000013817925120, guid: 7f5ba41cd11a46046867c42c363e4bd5,
+    type: 2}
