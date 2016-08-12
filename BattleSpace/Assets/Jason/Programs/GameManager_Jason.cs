@@ -28,8 +28,9 @@ public class GameManager_Jason : MonoBehaviour {
 
 	void Start () {
         Time.timeScale = 1.0f;
-        Physics.IgnoreLayerCollision(8, 9); // ignore collisions between enemies and enemy bullets
-        Physics.IgnoreLayerCollision(9, 10); // ignore collisions between player and enemy lasers (NOT ENEMY MISSLES)
+        Physics.IgnoreLayerCollision(8, 9); // ignore collisions between basic enemies and enemy lasers
+        Physics.IgnoreLayerCollision(9, 11); // ignore collisions between enemy lasers and enemy missles
+        Physics.IgnoreLayerCollision(9, 10); // ignore collisions between player and basic enemy lasers (NOT ENEMY MISSLES)
         Instantiate(Player, PlayerSpawn.position, PlayerSpawn.rotation);
 
 		//for (int i = 0; i < m_InitialSpawn; i++){

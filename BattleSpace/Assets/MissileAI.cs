@@ -15,12 +15,21 @@ public class MissileAI : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        
 		m_TotalFireTime = Time.time + m_FireRate;
 		Vector3 DownwardForce = new Vector3 (0f, 0f, m_MoveRate);
 		m_Self.AddForce (DownwardForce);
 		m_FireFlag = false;
-
 	}
+
+    IEnumerator IgnoreMisslesSelf() {
+        print("Ignore collisions with own missles");
+        Physics.IgnoreLayerCollision(8, 11, true);
+        yield return new WaitForSeconds(2);
+        Physics.IgnoreLayerCollision(8, 11, false);
+    }
+
+    Rigidbody shellInstance;
 
 	// Update is called once per frame
 	void Update () {
@@ -29,9 +38,10 @@ public class MissileAI : MonoBehaviour {
 			m_TotalFireTime = Time.time + m_FireRate;
 		}
 		if (m_FireFlag == true) {
-			Rigidbody shellInstance = Instantiate (m_Shell, m_FireTransform.position, m_FireTransform.rotation) as Rigidbody;
-			shellInstance.velocity = m_CurrentLaunchForce * m_FireTransform.up;
+			shellInstance = Instantiate (m_Shell, m_FireTransform.position, m_FireTransform.rotation) as Rigidbody;
+            StartCoroutine(IgnoreMisslesSelf()); // temporarily disable collisions with missles so the enemy doesn't kill itself instantly
+            shellInstance.velocity = m_CurrentLaunchForce * m_FireTransform.up;
 			m_FireFlag = false;
-		}
+        }
 	}
 }
