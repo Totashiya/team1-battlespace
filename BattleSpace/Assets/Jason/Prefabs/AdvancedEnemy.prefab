@@ -27,8 +27,6 @@ GameObject:
   - 65: {fileID: 6547702}
   - 23: {fileID: 2375400}
   - 54: {fileID: 5443040}
-  - 114: {fileID: 11423856}
-  - 114: {fileID: 11487740}
   m_Layer: 0
   m_Name: Enemy Hit Zero
   m_TagString: Untagged
@@ -101,17 +99,20 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 707d7c08a52053d47866d7dc03129b81, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
   m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_SelectedWireframeHidden: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -152,37 +153,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &11423856
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 165754}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c768313dd3a1d7444bf965f1ccf414d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  self: {fileID: 165754}
---- !u!114 &11487740
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 165754}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7663b4c4cd1c7114ca68f465e142c73c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MoveRate: 16
-  m_FireRate: 0.1
-  m_BurstNumber: 5
-  m_Shell: {fileID: 5444970, guid: 6d56c191ac074f94dbf5912a31b9014e, type: 2}
-  m_FireTransform: {fileID: 439640}
-  m_LaunchForce: 30
-  scalefactor: 10
-  m_Self: {fileID: 5443040}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

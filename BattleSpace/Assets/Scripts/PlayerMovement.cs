@@ -16,6 +16,8 @@ public class PlayerMovement : MonoBehaviour {
     public bool isForward = false;
     public bool isReverse = false;
 
+    public bool isHorizontal = false;
+
     float m_moveSpeed = 14f;
 
     Rigidbody m_Rigidbody;
@@ -52,12 +54,15 @@ public class PlayerMovement : MonoBehaviour {
 
         if (h == 1) {
             m_Rigidbody.rotation = Quaternion.Lerp(m_Rigidbody.rotation, Quaternion.Euler(-120, -90, 90), m_rotateSpeed * Time.deltaTime);
+            isHorizontal = true;
         }
         else if (h == -1) {
             m_Rigidbody.rotation = Quaternion.Lerp(m_Rigidbody.rotation, Quaternion.Euler(-60, -90, 90), m_rotateSpeed * Time.deltaTime);
+            isHorizontal = true;
         }
         else {
             m_Rigidbody.rotation = Quaternion.Lerp(m_Rigidbody.rotation, Quaternion.Euler(-90, 0, 0), m_rotateSpeed * Time.deltaTime);
+            isHorizontal = false;
         }
 
         m_Rigidbody.MovePosition(transform.position + movement);

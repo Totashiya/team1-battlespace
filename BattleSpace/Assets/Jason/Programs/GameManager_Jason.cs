@@ -17,11 +17,11 @@ public class GameManager_Jason : MonoBehaviour {
 	public int scale;
 	public int starter;
 	public int StartingWave;
+    public int WaveNumber;
 
-	private float target;
+    private float target;
 	private float EnemyNumberDecimal;
 	private int EnemyNumber;
-	private int WaveNumber;
 	private int prevEnemyNumber;
 
 	void Start () {
@@ -53,6 +53,7 @@ public class GameManager_Jason : MonoBehaviour {
 	}
 
     private void NextWave() {
+        print("Wave number: " + (WaveNumber - StartingWave + 1).ToString());
         EnemyNumberDecimal = -(EnemyCoeffiecient / WaveNumber) + MaximumEnemies;
         EnemyNumber = (int)Mathf.Round(EnemyNumberDecimal);
         if (EnemyNumber == prevEnemyNumber) {
@@ -76,7 +77,7 @@ public class GameManager_Jason : MonoBehaviour {
     public IEnumerator Respawn() {
         PlayerHealth playerHealth = GameObject.Find("GameManager").GetComponent<PlayerHealth>();
 
-        //Debug.Log("Respawning");
+        Debug.Log("Respawning");
         Destroy(GameObject.Find("PlayerCapsule(Clone)"));
 
         Time.timeScale = 0.75f; // make everything slow before respawning
@@ -84,8 +85,43 @@ public class GameManager_Jason : MonoBehaviour {
         yield return new WaitForSeconds(3f); // wait 3 seconds before respawning
 
         Time.timeScale = 1f;
+
         Instantiate(Player, PlayerSpawn.position, PlayerSpawn.rotation);
+
         playerHealth.m_CurrentHealth = 200f;
+
+        StartCoroutine(Invincible(GameObject.Find("PlayerCapsule(Clone)"), 2));
     }
 
+    public GameObject m_InvincibleParticles;
+    public GameObject m_InvincibleText;
+
+    IEnumerator Invincible(GameObject inv, float time) {
+        print("Player is invincible!");
+
+        Vector3 pos = inv.transform.position;
+        Quaternion rot = inv.transform.rotation;
+
+        // Show particles indicating invincibility 
+        Instantiate(m_InvincibleParticles, pos, rot, inv.transform);
+
+        // Show text informing the player that they're invincible
+        m_InvincibleText.SetActive(true);
+
+        foreach(Collider c in inv.GetComponents<BoxCollider>()) {
+            c.enabled = false;
+        }
+
+        yield return new WaitForSeconds(time);
+
+        foreach (Collider c in inv.GetComponents<BoxCollider>()) {
+            c.enabled = true;
+        }
+
+        Destroy(GameObject.Find("InvincibleParticles(Clone)"));
+        m_InvincibleText.SetActive(false);
+
+        print("Player is no longer invincible");
+    }
+    
 }

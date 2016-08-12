@@ -15,6 +15,7 @@ public class PlayerParticles : MonoBehaviour {
 
     bool m_isForward;
     bool m_isReverse;
+    bool m_isHorizontal;
 
 	void Start () {
         m_LeftThrusterParticles.SetActive(true);
@@ -31,6 +32,7 @@ public class PlayerParticles : MonoBehaviour {
         PlayerHealth playerHealth = GameObject.Find("GameManager").GetComponent<PlayerHealth>();
 
         m_isReverse = gameObject.GetComponent<PlayerMovement>().isReverse;
+        m_isHorizontal = gameObject.GetComponent<PlayerMovement>().isHorizontal;
 
         m_CurrentHealth = playerHealth.m_CurrentHealth;
         m_DamagedHealth = playerHealth.m_LowHealth;
@@ -45,7 +47,7 @@ public class PlayerParticles : MonoBehaviour {
         var em_leftThruster = leftThruster.emission;
         var em_rightThruster = rightThruster.emission;
 
-        em_leftThruster.enabled = !m_isReverse;
-        em_rightThruster.enabled = !m_isReverse;
+        em_leftThruster.enabled = !m_isReverse && !m_isHorizontal;
+        em_rightThruster.enabled = !m_isReverse && !m_isHorizontal;
 	}
 }
