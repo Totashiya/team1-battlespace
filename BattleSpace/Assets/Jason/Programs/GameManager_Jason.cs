@@ -21,6 +21,8 @@ public class GameManager_Jason : MonoBehaviour {
 	public int StartingWave;
     public int WaveNumber;
 
+    public bool Shop_isEnabled = false;
+
     private float target;
 	private float EnemyNumberDecimal;
 	private int EnemyNumber;
@@ -43,7 +45,7 @@ public class GameManager_Jason : MonoBehaviour {
 
 	void Update () {
 		//print (Time.time);
-		if (Time.time > target) {
+		if (Time.time > target && !Shop_isEnabled) {
 			NextWave ();
 			target = Time.time + m_SpawnRate;
 		}
@@ -87,7 +89,7 @@ public class GameManager_Jason : MonoBehaviour {
 				CreateEnemy((i * k) - 13, EnemyNumber % 2,EnemyNumber);
 			}
         }
-        print("Completed spawning wave " + WaveNumber.ToString());
+        //print("Completed spawning wave " + WaveNumber.ToString());
         WaveNumber++;
         prevEnemyNumber = EnemyNumber;
     }

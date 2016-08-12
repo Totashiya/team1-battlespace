@@ -13,29 +13,27 @@ public class FlankerAI : MonoBehaviour {
 	public Rigidbody m_Self;
 
 	private float m_targetfiretime;
-	private Transform m_Player;
+	private GameObject m_Player;
 
 	// private Vector3 m_relativelocation; //** commented out to remove warning
 
 
 	void Start () {
 		m_targetfiretime = Time.time + m_FireRate;
-		try{
-		m_Player = GameObject.Find ("PlayerCapsule(Clone)").transform;
-		}
-		catch{
-		}
+
+        
 
 		// m_Self.MovePosition (m_relativelocation);
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		try {
-			transform.LookAt (m_Player);
-		}
-		catch{
-		}
+	void FixedUpdate () {
+        m_Player = GameObject.Find("PlayerCapsule(Clone)");
+        //float step = Time.deltaTime * m_moveSpeed;
+
+        transform.LookAt (m_Player.transform);
+        //transform.position = Vector3.MoveTowards(transform.position, m_Player.transform.position, step);
+
 		if (Time.time > m_targetfiretime) {
 			BurstFire ();
 			m_targetfiretime = Time.time + m_targetfiretime;
@@ -44,6 +42,7 @@ public class FlankerAI : MonoBehaviour {
 			m_Self.Sleep ();
 		}
 	}
+    
 	private IEnumerator FireBurst(){
 		for (int i = 0; i < m_BurstNumber; i++ ) {
 			m_targetfiretime = Time.time + m_FireRate;
@@ -65,4 +64,5 @@ public class FlankerAI : MonoBehaviour {
 	public void BurstFire(){
 		StartCoroutine (FireBurst ());
 	}
+    
 }

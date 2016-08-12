@@ -2705,6 +2705,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1289336273}
   m_RootOrder: 4
+--- !u!1 &564413074
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 564413075}
+  - 114: {fileID: 564413076}
+  m_Layer: 5
+  m_Name: Shop
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &564413075
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 564413074}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 165018632}
+  m_RootOrder: 9
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &564413076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 564413074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28842fa0146ed764a9edca4a9cfcbcdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &766283006
 GameObject:
   m_ObjectHideFlags: 0
@@ -2921,6 +2966,22 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e522c7cb94d634b9790379b66aa75fca, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1062241975 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000013223600546, guid: e522c7cb94d634b9790379b66aa75fca,
+    type: 2}
+  m_PrefabInternal: {fileID: 1062241974}
+--- !u!114 &1062241976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1062241975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28842fa0146ed764a9edca4a9cfcbcdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1097493219 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114000010712771482, guid: fc2f58119bf82104da196fa531601f74,
