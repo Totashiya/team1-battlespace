@@ -29,7 +29,7 @@ public class GameManager_Jason : MonoBehaviour {
 	void Start () {
         Time.timeScale = 1.0f;
         Physics.IgnoreLayerCollision(8, 9); // ignore collisions between enemies and enemy bullets
-        Physics.IgnoreLayerCollision(9, 10); // ignore collisions between player and enemy bullets
+        Physics.IgnoreLayerCollision(9, 10); // ignore collisions between player and enemy lasers (NOT ENEMY MISSLES)
         Instantiate(Player, PlayerSpawn.position, PlayerSpawn.rotation);
 
 		//for (int i = 0; i < m_InitialSpawn; i++){
@@ -49,24 +49,30 @@ public class GameManager_Jason : MonoBehaviour {
 	}
 
 	private void CreateEnemy(float x, float y, int EnemyNumber){
+        //print("CreateEnemy()");
 		Vector3 Compensation = new Vector3 (x, 0f, y);
 		Vector3 CreatedEnemy = OriginalSpawn.position + Compensation;
 		if (EnemyNumber > 5) {
 			if (Mathf.Abs (x) > 10 && Mathf.Abs (x) < 15) {
-				GameObject CreatEnemy = Instantiate (FlankerEnemy, CreatedEnemy, OriginalSpawn.rotation) as GameObject;
+                //print("Spawned FlankerEnemy");
+                Instantiate(FlankerEnemy, CreatedEnemy, OriginalSpawn.rotation);
 			}
 			if (Mathf.Abs (x) >= 15) {
-				GameObject CreatEnemy = Instantiate (MissileEnemy, CreatedEnemy, OriginalSpawn.rotation) as GameObject;
+                //print("Spawned MissileEnemy");
+                Instantiate(MissileEnemy, CreatedEnemy, OriginalSpawn.rotation);
 			}
 		} else {
-			GameObject CreatEnemy = Instantiate (BasicEnemy, CreatedEnemy, OriginalSpawn.rotation) as GameObject;
+            //print("Spawned BasicEnemy");
+            Instantiate(BasicEnemy, CreatedEnemy, OriginalSpawn.rotation);
 		}
 	}
 
     private void NextWave() {
-        print("Wave number: " + (WaveNumber - StartingWave + 1).ToString());
+        print("NextWave()");
+        //print("Wave number: " + (WaveNumber - StartingWave + 1).ToString());
         EnemyNumberDecimal = -(EnemyCoeffiecient / WaveNumber) + MaximumEnemies;
         EnemyNumber = (int)Mathf.Round(EnemyNumberDecimal);
+        //print("Number of enemies: " + EnemyNumber);
         if (EnemyNumber == prevEnemyNumber) {
             EnemyNumber -= 1;
         }
@@ -80,7 +86,7 @@ public class GameManager_Jason : MonoBehaviour {
 				CreateEnemy((i * k) - 13, EnemyNumber % 2,EnemyNumber);
 			}
         }
-        
+        print("Completed spawning wave " + WaveNumber.ToString());
         WaveNumber++;
         prevEnemyNumber = EnemyNumber;
     }

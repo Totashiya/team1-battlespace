@@ -8,9 +8,9 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 472646}
-  m_Layer: 0
-  m_Name: AdvancedEnemy
-  m_TagString: Untagged
+  m_Layer: 8
+  m_Name: FlankerEnemy
+  m_TagString: Enemies
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,9 +28,9 @@ GameObject:
   - 23: {fileID: 2375400}
   - 54: {fileID: 5443040}
   - 114: {fileID: 114000013475039592}
-  m_Layer: 0
-  m_Name: Enemy Hit Zero
-  m_TagString: Untagged
+  m_Layer: 8
+  m_Name: Flanker
+  m_TagString: Enemies
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43,7 +43,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 439640}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FireTransform
   m_TagString: Untagged
   m_Icon: {fileID: 0}

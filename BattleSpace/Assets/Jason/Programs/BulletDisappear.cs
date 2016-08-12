@@ -4,12 +4,13 @@ using System.Collections;
 public class BulletDisappear : MonoBehaviour {
 
 	public float destroy;
-
-	private bool DestroyFlag;
+	public bool DestroyFlag;
 	private float target;
+
 	// Use this for initialization
 	void Start () {
-		DestroyFlag = false;
+        
+        DestroyFlag = false;
 		target = Time.time + destroy;
 	}
 	
@@ -17,9 +18,6 @@ public class BulletDisappear : MonoBehaviour {
 	void Update () {
 		if (Time.time > target) {
 			DestroyFlag = true;
-		}
-		if (DestroyFlag == true) {
-			Destroy (gameObject);
 		}
 
 	}

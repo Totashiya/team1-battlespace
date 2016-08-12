@@ -131,6 +131,7 @@ MonoBehaviour:
   botBorder: 0.1
   isForward: 0
   isReverse: 0
+  isHorizontal: 0
 --- !u!114 &11425768
 MonoBehaviour:
   m_ObjectHideFlags: 1
