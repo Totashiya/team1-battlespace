@@ -5,10 +5,11 @@ public class HomingBullet : MonoBehaviour {
 
 	public float m_Speed;
     public int m_Damage = 10; // how much damage the bullet does to the player
-
+	public Rigidbody m_Self;
     public GameObject hitExplosion;
 
     bool isColliding = false; // boolean to prevent multiple simultaneous collisions
+	private Transform m_Player;
 
 	void Start () {
         GetComponent<AudioSource>().Play();
@@ -17,11 +18,15 @@ public class HomingBullet : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         isColliding = false;
-		/*
-		float m_Step = m_Speed * Time.deltaTime;
-		transform.position = Vector3.MoveTowards (transform.position,m_Player.position, m_Speed);
-		transform.LookAt (m_Player.position);
-		*/
+		try{
+			m_Player = GameObject.Find("PlayerCapsule(Clone)").transform;
+			float step = Time.deltaTime * m_Speed;
+			transform.position =  Vector3.MoveTowards(transform.position, m_Player.transform,step);
+			transform.LookAt(m_Player.position);
+		}
+		catch{
+
+		}
 	}
     void OnTriggerEnter(Collider other) {
         PlayerHealth playerHealth = GameObject.Find("GameManager").GetComponent<PlayerHealth>();
