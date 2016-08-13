@@ -11,20 +11,25 @@ public class FlankerAI : MonoBehaviour {
 	public Transform m_FireTransform;
 	public int m_LaunchForce;
 	public Rigidbody m_Self;
+	public float m_moveRate;
 
 	private float m_targetfiretime;
+	private float m_targetfiretime2;
 	private Transform m_Player;
 
 	// private Vector3 m_relativelocation; //** commented out to remove warning
 
 
 	void Start () {
-		m_targetfiretime = Time.time + m_FireRate;
+		m_targetfiretime = 0f;
+
 		try{
 		m_Player = GameObject.Find ("PlayerCapsule(Clone)").transform;
 		}
 		catch{
 		}
+
+		m_targetfiretime2 = Time.time + m_FireRate;
 
 		// m_Self.MovePosition (m_relativelocation);
 	}
@@ -36,17 +41,16 @@ public class FlankerAI : MonoBehaviour {
 		}
 		catch{
 		}
-		if (Time.time > m_targetfiretime) {
+		if (Time.time > m_targetfiretime2) {
 			BurstFire ();
-			m_targetfiretime = Time.time + m_targetfiretime;
+			m_targetfiretime2 = Time.time + m_FireRate;
 		}
-		if (transform.position.y > 0) {
-			m_Self.Sleep ();
-		}
+		Vector3 DownwardForce = new Vector3 (0f, 0f, m_moveRate*Time.deltaTime);
+		m_Self.MovePosition (m_Self.position + DownwardForce);
 	}
 	private IEnumerator FireBurst(){
 		for (int i = 0; i < m_BurstNumber; i++ ) {
-			m_targetfiretime = Time.time + m_FireRate;
+			m_targetfiretime = Time.time + 0.2f;
 			while (Time.time < m_targetfiretime) {
 				yield return null;
 			}

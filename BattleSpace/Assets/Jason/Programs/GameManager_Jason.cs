@@ -58,13 +58,17 @@ public class GameManager_Jason : MonoBehaviour {
                 //print("Spawned FlankerEnemy");
                 Instantiate(FlankerEnemy, CreatedEnemy, OriginalSpawn.rotation);
 			}
-			if (Mathf.Abs (x) >= 12) {
+			else if (Mathf.Abs (x) >= 12) {
                 //print("Spawned MissileEnemy");
                 Instantiate(MissileEnemy, CreatedEnemy, OriginalSpawn.rotation);
 			}
-		} else {
-            //print("Spawned BasicEnemy");
-            Instantiate(BasicEnemy, CreatedEnemy, OriginalSpawn.rotation);
+			else {
+				//print("Spawned BasicEnemy");
+				Instantiate(BasicEnemy, CreatedEnemy, OriginalSpawn.rotation);
+			}
+		}  else {
+			//print("Spawned BasicEnemy");
+			Instantiate(BasicEnemy, CreatedEnemy, OriginalSpawn.rotation);
 		}
 	}
 
@@ -82,9 +86,9 @@ public class GameManager_Jason : MonoBehaviour {
 			CreateEnemy (0f, 0f,EnemyNumber);
         }
         else {
-            k = 36 / EnemyNumber;
+			k = 28 / (EnemyNumber-1);
 			for (int i = 0; i < EnemyNumber; i++) {
-				CreateEnemy((i * k) - 13, EnemyNumber % 2,EnemyNumber);
+				CreateEnemy((i * k) - 14, EnemyNumber % 2,EnemyNumber);
 			}
         }
         print("Completed spawning wave " + WaveNumber.ToString());
