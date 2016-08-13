@@ -30,20 +30,38 @@ public class HomingBullet : MonoBehaviour {
         StopFollowing = false;
         m_Speed = m_MinSpeed;
         GetComponent<AudioSource>().Play();
-
+		try{
 		m_Player = GameObject.Find("PlayerCapsule(Clone)").transform;
+	}
+		catch{
+		}
 	}
 
     void Update() {
-        StopFollowing = GetComponent<BulletDisappear>().DestroyFlag;
+		try{
+			m_Player = GameObject.Find("PlayerCapsule(Clone)").transform;
+			follow = true;
+		}
+
+		catch{
+			follow = false;
+		}
+		StopFollowing = GetComponent<BulletDisappear>().DestroyFlag;
         if(StopFollowing) {
             follow = false;
         }
+
     }
 
 	void FixedUpdate () {
         isColliding = false;
+		try{
 		m_Player = GameObject.Find("PlayerCapsule(Clone)").transform;
+			follow = true;
+		}
+		catch{
+			follow = false;
+		}
 
 		float step = Time.deltaTime * m_Speed;
 

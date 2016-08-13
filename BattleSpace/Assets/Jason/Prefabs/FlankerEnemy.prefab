@@ -176,9 +176,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d03336d5064e70a4f960148713face0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FireRate: 2
+  m_FireRate: 5
   m_BurstNumber: 5
   m_Shell: {fileID: 54000013670326516, guid: d30c933f849b38a4a87f7fce0a186e07, type: 2}
   m_FireTransform: {fileID: 439640}
   m_LaunchForce: 60
   m_Self: {fileID: 5443040}
+  m_moveRate: 1
