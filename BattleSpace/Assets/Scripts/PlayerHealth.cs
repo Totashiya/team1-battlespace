@@ -37,6 +37,7 @@ public class PlayerHealth : MonoBehaviour {
     void Start() {
         // When the player is enabled (change function name to onEnable), reset its health and its death status
         m_CurrentHealth = m_StartingHealth;
+        Mathf.Clamp(m_CurrentHealth, 0, 200);
 
         m_HealthValue = m_HealthText.GetComponent<Text>();
         m_LivesValue = m_LivesText.GetComponent<Text>();

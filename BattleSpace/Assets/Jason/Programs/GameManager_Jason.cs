@@ -4,76 +4,89 @@ using System.Collections;
 public class GameManager_Jason : MonoBehaviour {
 
     // public GameObject m_Player;
+    public GameObject Shop;
 
     public float m_SpawnRate;
-	public int m_InitialSpawn;
-	public Transform OriginalSpawn;
-	public Rigidbody BasicEnemy;
-	public Rigidbody MissileEnemy;
-	public Rigidbody FlankerEnemy;
-	public Rigidbody Player;
-	public Transform TacticalReturn;
-	public Transform PlayerSpawn;
-	public float EnemyCoeffiecient;
-	public float MaximumEnemies;
-	public int scale;
-	public int starter;
-	public int StartingWave;
+    public int m_InitialSpawn;
+    public Transform OriginalSpawn;
+    public Rigidbody BasicEnemy;
+    public Rigidbody MissileEnemy;
+    public Rigidbody FlankerEnemy;
+    public Rigidbody Player;
+    public Transform TacticalReturn;
+    public Transform PlayerSpawn;
+    public float EnemyCoeffiecient;
+    public float MaximumEnemies;
+    public int scale;
+    public int starter;
+    public int StartingWave;
     public int WaveNumber;
 
-    public bool Shop_isEnabled = false;
+    public int scoreToStore = 5000; // every 5000 points the store will open, this value will increase every upgrade
+    public bool stopSpawn = false;
 
     private float target;
-	private float EnemyNumberDecimal;
-	private int EnemyNumber;
-	private int prevEnemyNumber;
+    private float EnemyNumberDecimal;
+    private int EnemyNumber;
+    private int prevEnemyNumber;
+    private int actualWaveNumber = 0;
 
-	void Start () {
+    void Start() {
         Time.timeScale = 1.0f;
         Physics.IgnoreLayerCollision(8, 9); // ignore collisions between basic enemies and enemy lasers
         Physics.IgnoreLayerCollision(9, 11); // ignore collisions between enemy lasers and enemy missles
         Physics.IgnoreLayerCollision(9, 10); // ignore collisions between player and basic enemy lasers (NOT ENEMY MISSLES)
         Instantiate(Player, PlayerSpawn.position, PlayerSpawn.rotation);
 
-		//for (int i = 0; i < m_InitialSpawn; i++){
-		//	CreateEnemy(i-m_InitialSpawn/2);
-		//}
-		target = m_SpawnRate;
-		WaveNumber = StartingWave;
+        //for (int i = 0; i < m_InitialSpawn; i++){
+        //	CreateEnemy(i-m_InitialSpawn/2);
+        //}
+        target = m_SpawnRate;
+        WaveNumber = StartingWave;
         NextWave();
-	}
+    }
 
-	void Update () {
-		//print (Time.time);
-		if (Time.time > target && !Shop_isEnabled) {
-			NextWave ();
-			target = Time.time + m_SpawnRate;
-		}
-	}
+    void Update() {
+        // if 60 seconds have passed and either upgrade is available
+        if (Time.time > target && !stopSpawn) {
+            NextWave();
+            target = Time.time + m_SpawnRate;
+        }
 
-	private void CreateEnemy(float x, float y, int EnemyNumber){
+        if((GetComponent<PlayerScore>().m_Score >= scoreToStore) && (Shop.GetComponent<Shop>().upgrade1Enabled || Shop.GetComponent<Shop>().upgrade2Enabled)) {
+            stopSpawn = true;
+        }
+
+        if(stopSpawn) {
+            Shop.SetActive(true);
+        }
+    }
+
+    private void CreateEnemy(float x, float y, int EnemyNumber) {
         //print("CreateEnemy()");
-		Vector3 Compensation = new Vector3 (x, 0f, y);
-		Vector3 CreatedEnemy = OriginalSpawn.position + Compensation;
-		if (EnemyNumber > 5) {
-			if (Mathf.Abs (x) > 8 && Mathf.Abs (x) < 13) {
+        Vector3 Compensation = new Vector3(x, 0f, y);
+        Vector3 CreatedEnemy = OriginalSpawn.position + Compensation;
+        if (EnemyNumber > 5) {
+            if (Mathf.Abs(x) > 8 && Mathf.Abs(x) < 13) {
                 //print("Spawned FlankerEnemy");
                 Instantiate(FlankerEnemy, CreatedEnemy, OriginalSpawn.rotation);
-			}
-			if (Mathf.Abs (x) >= 12) {
+            }
+            if (Mathf.Abs(x) >= 12) {
                 //print("Spawned MissileEnemy");
                 Instantiate(MissileEnemy, CreatedEnemy, OriginalSpawn.rotation);
-			}
-		} else {
+            }
+        }
+        else {
             //print("Spawned BasicEnemy");
             Instantiate(BasicEnemy, CreatedEnemy, OriginalSpawn.rotation);
-		}
-	}
+        }
+    }
 
     private void NextWave() {
+        print("Wave number: " + actualWaveNumber.ToString());
         print("NextWave()");
-        //print("Wave number: " + (WaveNumber - StartingWave + 1).ToString());
         EnemyNumberDecimal = -(EnemyCoeffiecient / WaveNumber) + MaximumEnemies;
+        actualWaveNumber = WaveNumber - StartingWave + 1;
         EnemyNumber = (int)Mathf.Round(EnemyNumberDecimal);
         //print("Number of enemies: " + EnemyNumber);
         if (EnemyNumber == prevEnemyNumber) {
@@ -81,13 +94,13 @@ public class GameManager_Jason : MonoBehaviour {
         }
         float k = 0;
         if (EnemyNumber <= 1) {
-			CreateEnemy (0f, 0f,EnemyNumber);
+            CreateEnemy(0f, 0f, EnemyNumber);
         }
         else {
             k = 36 / EnemyNumber;
-			for (int i = 0; i < EnemyNumber; i++) {
-				CreateEnemy((i * k) - 13, EnemyNumber % 2,EnemyNumber);
-			}
+            for (int i = 0; i < EnemyNumber; i++) {
+                CreateEnemy((i * k) - 13, EnemyNumber % 2, EnemyNumber);
+            }
         }
         //print("Completed spawning wave " + WaveNumber.ToString());
         WaveNumber++;
@@ -128,7 +141,7 @@ public class GameManager_Jason : MonoBehaviour {
         // Show text informing the player that they're invincible
         m_InvincibleText.SetActive(true);
 
-        foreach(Collider c in inv.GetComponents<BoxCollider>()) {
+        foreach (Collider c in inv.GetComponents<BoxCollider>()) {
             c.enabled = false;
         }
 
@@ -143,5 +156,5 @@ public class GameManager_Jason : MonoBehaviour {
 
         print("Player is no longer invincible");
     }
-    
+
 }

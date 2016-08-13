@@ -55,6 +55,7 @@ GameObject:
   - 222: {fileID: 222000010313008444}
   - 114: {fileID: 114000011676096698}
   - 114: {fileID: 114000012971419154}
+  - 82: {fileID: 82000012218526462}
   m_Layer: 5
   m_Name: AboutButton
   m_TagString: Untagged
@@ -146,6 +147,7 @@ GameObject:
   - 222: {fileID: 222000011221316042}
   - 114: {fileID: 114000013181587596}
   - 114: {fileID: 114000012772647690}
+  - 82: {fileID: 82000014131262528}
   m_Layer: 5
   m_Name: PlayButton
   m_TagString: Untagged
@@ -196,6 +198,7 @@ GameObject:
   - 222: {fileID: 222000012488464882}
   - 114: {fileID: 114000012678062368}
   - 114: {fileID: 114000012789952000}
+  - 82: {fileID: 82000010616533202}
   m_Layer: 5
   m_Name: CreditsButton
   m_TagString: Untagged
@@ -397,6 +400,7 @@ GameObject:
   - 222: {fileID: 222000010601595136}
   - 114: {fileID: 114000010790928432}
   - 114: {fileID: 114000013809688016}
+  - 82: {fileID: 82000012233526664}
   m_Layer: 5
   m_Name: QuitButton
   m_TagString: Untagged
@@ -488,6 +492,302 @@ Transform:
   - {fileID: 224000012697860816}
   m_Father: {fileID: 224000011858956000}
   m_RootOrder: 2
+--- !u!82 &82000010616533202
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011123411278}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 30f72983deb5a21458b0f56984faba6e, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.8
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!82 &82000012218526462
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010375436044}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 30f72983deb5a21458b0f56984faba6e, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.8
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!82 &82000012233526664
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000014023021282}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 30f72983deb5a21458b0f56984faba6e, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.8
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!82 &82000014131262528
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010999186320}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 30f72983deb5a21458b0f56984faba6e, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.8
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!114 &114000010285549752
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -520,17 +820,17 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0.8
-  m_Text: "<b>Developers</b>\nChristine Chen\nJason Ouyang\nMeghan Guo\n\n<b>Skybox
-    Textures</b>\nImage 1: <i>Wide Field Imager view of a Milky Way look-alike, NGC
-    6744</i> - ESO (eso.org)\nImage 2: <i>Hiding in Plain Sight \u2014 the elusive
-    Carina Dwarf Galaxy</i> - ESO/G. Bono & CTIO (eso.org)\n\n<b>Fonts</b>\n<i>Titillium
+  m_Text: "<b>Skybox Textures</b>\nImage 1: <i>Wide Field Imager view of a Milky Way
+    look-alike, NGC 6744</i> - ESO (eso.org)\nImage 2: <i>Hiding in Plain Sight \u2014
+    the elusive Carina Dwarf Galaxy</i> - ESO/G. Bono & CTIO (eso.org)\n\n<b>Fonts</b>\n<i>Titillium
     Web Regular</i> - Copyright (c) 2009-2011 by Accademia di Belle Arti di Urbino
     and students of MA course of Visual design. Some rights reserved.\r\nThis Font
     Software is licensed under the SIL Open Font License, Version 1.1.\n\n<i>Bungee
     Inline, Shade and Regular</i> - Copyright 2008 The Bungee Project Authors (david@djr.com)\r\nThis
     Font Software is licensed under the SIL Open Font License, Version 1.1.\r\nThis
     license is copied below, and is also available with a FAQ at:\r\nhttp://scripts.sil.org/OFL\r\n\r\n<b>Music</b>\n<i>Quiescent
-    In Time</i> by Shane Ivers - https://www.silvermansound.com\n\n-----------------------------------------------------------\r\n\nSIL
+    In Time</i> by Shane Ivers - https://www.silvermansound.com\n<i>ChipTune</i> by
+    Shane Ivers - https://www.silvermansound.com\n\n-----------------------------------------------------------\r\n\nSIL
     OPEN FONT LICENSE Version 1.1 - 26 February 2007\r\n\nPREAMBLE\r\nThe goals of
     the Open Font License (OFL) are to stimulate worldwide\r\ndevelopment of collaborative
     font projects, to support the font creation\r\nefforts of academic and linguistic
@@ -1036,13 +1336,25 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 0.8
-  m_Text: "INCOMING MESSAGE:\n-----------------------------------\n<size=30>Welcome
-    to BattleSpace!\nIn this game, you must try to survive as long as you can against
-    the alien space force. Their army uses one basic space ship design, but be careful
-    fighting them- You have only 3 ships, while they have hundreds, maybe thousands.
-    Hopefully, you will fight better than our previous pilots...\n\nGood luck!\n\tYour
-    employers</size>"
+    m_LineSpacing: 0.7
+  m_Text: "<color=white><b>Controls</b>\nFire: Left-Click or Spacebar\nMove: WASD
+    or Arrow keys\nBrake: Left Shift</color>\n\n-------INCOMING MESSAGE-------\n\n<size=30>Dear
+    [RECRUIT],\n\n<b>Welcome to BattleSpace!</b>\nYour job is to survive as long as
+    you can against the alien space force. While dodging their attacks, you will defend
+    yourself by shooting them with lasers. From what we know, some of them shoot lasers
+    like yours, while others shoot homing rockets.\n\nPeriodically, you will get opportunities
+    to upgrade your equipment. Possible upgrades include weapon upgrades and speed
+    upgrades. Choose wisely which you will pick, as you can only get one upgrade at
+    a time. Your ship will be automatically repaired when you upgrade.\n\nGood luck!\n\tYour
+    employers @ BATTLESPACE</size>\n\n--------END OF MESSAGE---------\n\n<size=30><b>TIPS</b>\n-
+    Try not to stay in one spot for too long, or you might get walled in by enemy
+    fire.\n- Enemies are vulnerable to their own attacks. Try leading their homing
+    rockets back to them so they can get a taste of their own medicine.\n- You can
+    shoot rockets before they hit you, and earn a small amount of points.\n- Hold
+    down the fire button to shoot lasers as fast as possible.\n- One way to defeat
+    enemy ships is by simply running into them. This isn't recommended however, since
+    you get no points and lose 20 health.\n- You will earn more points from destroying
+    enemies that are closer to the bottom of the screen. </size>"
 --- !u!114 &114000012518825276
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1186,6 +1498,17 @@ MonoBehaviour:
           m_StringArgument: play
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 82000014131262528}
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114000012789952000
@@ -1236,6 +1559,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: credits
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 82000012233526664}
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -1321,6 +1655,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: about
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 82000012233526664}
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -1513,7 +1858,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 224000014151137778}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.7698413
+  m_Size: 0.2607527
   m_NumberOfSteps: 1
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1568,6 +1913,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: quit
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 82000012233526664}
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -2044,8 +2400,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0000038146973, y: -58}
-  m_SizeDelta: {x: 552, y: 504}
+  m_AnchoredPosition: {x: 0.0000038146973, y: -550}
+  m_SizeDelta: {x: 552, y: 1488}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224000012619312448
 RectTransform:
@@ -2264,7 +2620,7 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 224000011890632990}
   m_RootOrder: 0
-  m_AnchorMin: {x: 0, y: 0.23015869}
+  m_AnchorMin: {x: 0, y: 0.7392473}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}

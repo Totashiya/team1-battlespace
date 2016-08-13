@@ -26,6 +26,8 @@ GameObject:
   - 114: {fileID: 114000010631179582}
   - 114: {fileID: 114000010706839486}
   - 82: {fileID: 82000010555302526}
+  - 114: {fileID: 114000013675271316}
+  - 114: {fileID: 114000011551516228}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -201,6 +203,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeTime: 1
+--- !u!114 &114000011551516228
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013223600546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28842fa0146ed764a9edca4a9cfcbcdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxFireRate: 0.2
+  maxSpeed: 20
+  upgrade1Button: {fileID: 0}
+  upgrade1Enabled: 1
+  upgrade2Button: {fileID: 0}
+  upgrade2Enabled: 1
 --- !u!114 &114000012784500342
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -212,6 +231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b61c430cb6ca80741b101deacab997ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Shop: {fileID: 0}
   m_SpawnRate: 5
   m_InitialSpawn: 0
   OriginalSpawn: {fileID: 4000010875074768}
@@ -226,6 +246,28 @@ MonoBehaviour:
   scale: 0
   starter: 0
   StartingWave: 28
+  WaveNumber: 29
+  stopSpawn: 0
+  m_InvincibleParticles: {fileID: 1000012811598074, guid: 8dfcfd9642b5f464dbd97ff86e15e1e7,
+    type: 2}
+  m_InvincibleText: {fileID: 0}
+--- !u!114 &114000013675271316
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013223600546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28842fa0146ed764a9edca4a9cfcbcdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxFireRate: 0.2
+  maxSpeed: 20
+  upgrade1Button: {fileID: 0}
+  upgrade1Enabled: 1
+  upgrade2Button: {fileID: 0}
+  upgrade2Enabled: 1
 --- !u!114 &114000014250969184
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -252,4 +294,4 @@ MonoBehaviour:
   m_RespawnText: {fileID: 0}
   ExplosionParticles: {fileID: 1000010884813578, guid: ff7b73495f847dd40858900172a90976,
     type: 2}
-  m_CurrentHealth: 200
+  m_CurrentHealth: 190
