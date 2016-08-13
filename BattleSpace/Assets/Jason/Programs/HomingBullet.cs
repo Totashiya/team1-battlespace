@@ -43,23 +43,29 @@ public class HomingBullet : MonoBehaviour {
 
     void FixedUpdate() {
         isColliding = false;
-        m_Player = GameObject.Find("PlayerCapsule(Clone)").transform;
+		float step = Time.deltaTime * m_Speed;
+		try {
+			m_Player = GameObject.Find("PlayerCapsule(Clone)").transform;
 
-        float step = Time.deltaTime * m_Speed;
+	        if (follow) {
+	            transform.position = Vector3.MoveTowards(transform.position, m_Player.transform.position, step);
+	            transform.LookAt(m_Player.position);
+	            transform.Rotate(CompVector);
+	        }
+	        else {
+	            print("Stopped following");
+	            transform.position = Vector3.MoveTowards(transform.position, Follow.transform.position, step);
+	        }
 
-        if (follow) {
-            transform.position = Vector3.MoveTowards(transform.position, m_Player.transform.position, step);
-            transform.LookAt(m_Player.position);
-            transform.Rotate(CompVector);
-        }
-        else {
-            print("Stopped following");
-            transform.position = Vector3.MoveTowards(transform.position, Follow.transform.position, step);
-        }
+	        if (m_Speed < m_MaxSpeed) {
+	            m_Speed += m_AccelRate;
+	        }
+		}
 
-        if (m_Speed < m_MaxSpeed) {
-            m_Speed += m_AccelRate;
-        }
+		catch {
+			print ("Could not find player, moving forward");
+			transform.position = Vector3.MoveTowards(transform.position, Follow.transform.position, step);
+		}
     }
 
     void OnTriggerEnter(Collider other) {
