@@ -484,6 +484,29 @@ Prefab:
       propertyPath: m_Name
       value: GUI_MainMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 1000013292521572, guid: f9275dea095b6e649b592b266e44484a, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000014285732528, guid: f9275dea095b6e649b592b266e44484a, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000014151137778, guid: f9275dea095b6e649b592b266e44484a,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 0.7392473
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000014151137778, guid: f9275dea095b6e649b592b266e44484a,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000014151137778, guid: f9275dea095b6e649b592b266e44484a,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f9275dea095b6e649b592b266e44484a, type: 2}
   m_IsPrefabParent: 0

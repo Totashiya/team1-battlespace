@@ -21,6 +21,10 @@ public class GameManager_Jason : MonoBehaviour {
 	public int StartingWave;
     public int WaveNumber;
 
+    public GameObject Shop;
+    public int scoreToStore = 5000;
+    public bool stopSpawn = false;
+
     private float target;
 	private float EnemyNumberDecimal;
 	private int EnemyNumber;
@@ -43,10 +47,18 @@ public class GameManager_Jason : MonoBehaviour {
 
 	void Update () {
 		//print (Time.time);
-		if (Time.time > target) {
+		if (Time.time > target && !stopSpawn) {
 			NextWave ();
 			target = Time.time + m_SpawnRate;
 		}
+
+        if(GetComponent<PlayerScore>().m_Score >= 5000) {
+            stopSpawn = true;
+        }
+
+        if(stopSpawn) {
+            Shop.SetActive(true);
+        }
 	}
 
 	private void CreateEnemy(float x, float y, int EnemyNumber){

@@ -12,58 +12,40 @@ public class HomingBullet : MonoBehaviour {
     public float m_MaxSpeed = 5;
     public float m_AccelRate = 0.02f;
     public int m_Damage = 30; // how much damage the bullet does to the player
-	Rigidbody m_Self;
+    Rigidbody m_Self;
     public GameObject hitExplosion;
     public GameObject Follow;
-	public Vector3 CompVector;
+    public Vector3 CompVector;
 
     bool isColliding = false; // boolean to prevent multiple simultaneous collisions
-	private Transform m_Player;
+    private Transform m_Player;
     private float m_Speed;
 
     bool StopFollowing;
     bool follow = true;
 
-	void Start () {
+    void Start() {
         HUD = GameObject.Find("HUD");
 
         StopFollowing = false;
         m_Speed = m_MinSpeed;
         GetComponent<AudioSource>().Play();
-		try{
-		m_Player = GameObject.Find("PlayerCapsule(Clone)").transform;
-	}
-		catch{
-		}
-	}
 
-    void Update() {
-		try{
-			m_Player = GameObject.Find("PlayerCapsule(Clone)").transform;
-			follow = true;
-		}
-
-		catch{
-			follow = false;
-		}
-		StopFollowing = GetComponent<BulletDisappear>().DestroyFlag;
-        if(StopFollowing) {
-            follow = false;
-        }
-
+        m_Player = GameObject.Find("PlayerCapsule(Clone)").transform;
     }
 
-	void FixedUpdate () {
-        isColliding = false;
-		try{
-		m_Player = GameObject.Find("PlayerCapsule(Clone)").transform;
-			follow = true;
-		}
-		catch{
-			follow = false;
-		}
+    void Update() {
+        StopFollowing = GetComponent<BulletDisappear>().DestroyFlag;
+        if (StopFollowing) {
+            follow = false;
+        }
+    }
 
-		float step = Time.deltaTime * m_Speed;
+    void FixedUpdate() {
+        isColliding = false;
+        m_Player = GameObject.Find("PlayerCapsule(Clone)").transform;
+
+        float step = Time.deltaTime * m_Speed;
 
         if (follow) {
             transform.position = Vector3.MoveTowards(transform.position, m_Player.transform.position, step);
@@ -75,10 +57,10 @@ public class HomingBullet : MonoBehaviour {
             transform.position = Vector3.MoveTowards(transform.position, Follow.transform.position, step);
         }
 
-        if(m_Speed < m_MaxSpeed) {
+        if (m_Speed < m_MaxSpeed) {
             m_Speed += m_AccelRate;
         }
-	}
+    }
 
     void OnTriggerEnter(Collider other) {
         PlayerHealth playerHealth = GameObject.Find("GameManager").GetComponent<PlayerHealth>();
@@ -100,7 +82,7 @@ public class HomingBullet : MonoBehaviour {
             Destroy(HitExplosion, HitExplosion.GetComponent<ParticleSystem>().duration);
         }
 
-        else if(other.CompareTag("Enemies")) {
+        else if (other.CompareTag("Enemies")) {
             print("Missle hit enemy");
             isColliding = true;
 
