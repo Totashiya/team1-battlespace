@@ -2736,11 +2736,6 @@ Prefab:
       propertyPath: m_InvincibleText
       value: 
       objectReference: {fileID: 1458828984}
-    - target: {fileID: 114000012784500342, guid: e522c7cb94d634b9790379b66aa75fca,
-        type: 2}
-      propertyPath: scoreToStore
-      value: 1000
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e522c7cb94d634b9790379b66aa75fca, type: 2}
   m_IsPrefabParent: 0
