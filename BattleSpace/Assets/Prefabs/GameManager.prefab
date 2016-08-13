@@ -231,7 +231,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b61c430cb6ca80741b101deacab997ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Shop: {fileID: 0}
   m_SpawnRate: 5
   m_InitialSpawn: 0
   OriginalSpawn: {fileID: 4000010875074768}
@@ -247,6 +246,8 @@ MonoBehaviour:
   starter: 0
   StartingWave: 28
   WaveNumber: 29
+  Shop: {fileID: 0}
+  scoreToStore: 1000
   stopSpawn: 0
   m_InvincibleParticles: {fileID: 1000012811598074, guid: 8dfcfd9642b5f464dbd97ff86e15e1e7,
     type: 2}

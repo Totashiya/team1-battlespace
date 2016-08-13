@@ -22,7 +22,8 @@ public class Shop : MonoBehaviour {
                 GameObject.Find("PlayerCapsule(Clone)").GetComponent<Player_Firing>().fireRate -= (float)0.025;
 
                 GameObject.Find("GameManager").GetComponent<GameManager_Jason>().stopSpawn = false;
-                GameObject.Find("GameManager").GetComponent<GameManager_Jason>().scoreToStore += 1500;
+				GameObject.Find("GameManager").GetComponent<GameManager_Jason>().scoreToStore += 
+					GameObject.Find("GameManager").GetComponent<GameManager_Jason>().scoreToStore;
                 gameObject.SetActive(false);
 
                 if (GameObject.Find("PlayerCapsule(Clone)").GetComponent<Player_Firing>().fireRate <= maxFireRate) {
@@ -37,7 +38,9 @@ public class Shop : MonoBehaviour {
                 GameObject.Find("PlayerCapsule(Clone)").GetComponent<PlayerMovement>().m_defaultSpeed += 1;
 
                 GameObject.Find("GameManager").GetComponent<GameManager_Jason>().stopSpawn = false;
-                GameObject.Find("GameManager").GetComponent<GameManager_Jason>().scoreToStore += 1500;
+				GameObject.Find("GameManager").GetComponent<GameManager_Jason>().scoreToStore += 
+					GameObject.Find("GameManager").GetComponent<GameManager_Jason>().scoreToStore;
+			
                 gameObject.SetActive(false);
 
                 if (GameObject.Find("PlayerCapsule(Clone)").GetComponent<PlayerMovement>().m_defaultSpeed >= maxSpeed) {

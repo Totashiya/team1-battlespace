@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.037952606, g: 0.032533232, b: 0.030049313, a: 1}
+  m_IndirectSpecularColor: {r: 0.03793442, g: 0.032583933, b: 0.030029655, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -2557,48 +2557,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1872307580}
   m_RootOrder: 2
---- !u!1001 &767416011
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 476624, guid: c88f148445b601e469e511cd79b447ef, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 476624, guid: c88f148445b601e469e511cd79b447ef, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 476624, guid: c88f148445b601e469e511cd79b447ef, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -6.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 476624, guid: c88f148445b601e469e511cd79b447ef, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 476624, guid: c88f148445b601e469e511cd79b447ef, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 476624, guid: c88f148445b601e469e511cd79b447ef, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 476624, guid: c88f148445b601e469e511cd79b447ef, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 476624, guid: c88f148445b601e469e511cd79b447ef, type: 2}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: c88f148445b601e469e511cd79b447ef, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &779380348
 GameObject:
   m_ObjectHideFlags: 0
@@ -2733,16 +2691,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114000012784500342, guid: e522c7cb94d634b9790379b66aa75fca,
+    - target: {fileID: 114000010631179582, guid: e522c7cb94d634b9790379b66aa75fca,
         type: 2}
-      propertyPath: Shop
+      propertyPath: m_ScoreText
       value: 
-      objectReference: {fileID: 396299571}
-    - target: {fileID: 114000012784500342, guid: e522c7cb94d634b9790379b66aa75fca,
+      objectReference: {fileID: 1766065478}
+    - target: {fileID: 114000010631179582, guid: e522c7cb94d634b9790379b66aa75fca,
         type: 2}
-      propertyPath: m_InvincibleText
+      propertyPath: m_HighestScoreText
       value: 
-      objectReference: {fileID: 1458828984}
+      objectReference: {fileID: 1058745327}
     - target: {fileID: 114000014250969184, guid: e522c7cb94d634b9790379b66aa75fca,
         type: 2}
       propertyPath: m_Slider
@@ -2768,20 +2726,20 @@ Prefab:
       propertyPath: m_RespawnText
       value: 
       objectReference: {fileID: 1912343483}
-    - target: {fileID: 114000010631179582, guid: e522c7cb94d634b9790379b66aa75fca,
+    - target: {fileID: 114000012784500342, guid: e522c7cb94d634b9790379b66aa75fca,
         type: 2}
-      propertyPath: m_ScoreText
+      propertyPath: Shop
       value: 
-      objectReference: {fileID: 1766065478}
-    - target: {fileID: 114000010631179582, guid: e522c7cb94d634b9790379b66aa75fca,
+      objectReference: {fileID: 396299571}
+    - target: {fileID: 114000012784500342, guid: e522c7cb94d634b9790379b66aa75fca,
         type: 2}
-      propertyPath: m_HighestScoreText
+      propertyPath: m_InvincibleText
       value: 
-      objectReference: {fileID: 1058745327}
+      objectReference: {fileID: 1458828984}
     - target: {fileID: 114000012784500342, guid: e522c7cb94d634b9790379b66aa75fca,
         type: 2}
       propertyPath: scoreToStore
-      value: 500
+      value: 1000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e522c7cb94d634b9790379b66aa75fca, type: 2}

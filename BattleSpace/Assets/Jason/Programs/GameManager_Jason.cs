@@ -52,7 +52,7 @@ public class GameManager_Jason : MonoBehaviour {
 			target = Time.time + m_SpawnRate;
 		}
 
-        if(GetComponent<PlayerScore>().m_Score >= 5000) {
+		if (GetComponent<PlayerScore>().m_Score >= scoreToStore) {
             stopSpawn = true;
         }
 
