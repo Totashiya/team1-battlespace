@@ -30,8 +30,11 @@ public class HomingBullet : MonoBehaviour {
         StopFollowing = false;
         m_Speed = m_MinSpeed;
         GetComponent<AudioSource>().Play();
-
+		try{
         m_Player = GameObject.Find("PlayerCapsule(Clone)").transform;
+		}
+		catch{
+		}
     }
 
     void Update() {
