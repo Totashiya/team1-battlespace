@@ -24,9 +24,11 @@ public class FlankerAI : MonoBehaviour {
 		m_targetfiretime = 0f;
 
 		try{
-		m_Player = GameObject.Find ("PlayerCapsule(Clone)").transform;
+		    m_Player = GameObject.Find ("PlayerCapsule(Clone)").transform;
 		}
+
 		catch{
+            print("Flanker: Could not find player");
 		}
 
 		m_targetfiretime2 = Time.time + m_FireRate;
@@ -63,7 +65,7 @@ public class FlankerAI : MonoBehaviour {
 	public void Fire()
 	{
 		Rigidbody shellInstance = Instantiate (m_Shell, m_FireTransform.position, m_FireTransform.rotation) as Rigidbody;
-		shellInstance.velocity = m_LaunchForce* m_FireTransform.forward;
+		shellInstance.velocity = m_LaunchForce* m_FireTransform.up;
 
 	}
 	public void BurstFire(){
