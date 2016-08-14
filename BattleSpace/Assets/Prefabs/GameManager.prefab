@@ -247,7 +247,7 @@ MonoBehaviour:
   StartingWave: 28
   WaveNumber: 29
   Shop: {fileID: 0}
-  scoreToStore: 1000
+  scoreToStore: 10000
   stopSpawn: 0
   m_InvincibleParticles: {fileID: 1000012811598074, guid: 8dfcfd9642b5f464dbd97ff86e15e1e7,
     type: 2}

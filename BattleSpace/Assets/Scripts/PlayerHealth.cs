@@ -68,9 +68,6 @@ public class PlayerHealth : MonoBehaviour {
     }
 
     void Update() {
-        if (Input.GetKeyDown(KeyCode.Q)) {
-            Dead();
-        }
         SetHealthUI();
     }
 

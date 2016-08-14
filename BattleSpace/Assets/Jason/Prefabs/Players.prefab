@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Shell: {fileID: 5444970, guid: d30c933f849b38a4a87f7fce0a186e07, type: 2}
   m_Player: {fileID: 5403420}
   m_FireTransform: {fileID: 407232}
-  fireRate: 0.3
+  fireRate: 0.5
   m_LaunchForce: 60
   m_MaxChargeTime: 0.75
 --- !u!1001 &100100000

@@ -4,10 +4,6 @@ using System.Collections;
 
 public class HomingBullet : MonoBehaviour {
 
-    GameObject HUD;
-    GameObject EarnedTextObject;
-    public GameObject EarnedTextPrefab;
-
     public float m_MinSpeed = 2;
     public float m_MaxSpeed = 5;
     public float m_AccelRate = 0.02f;
@@ -25,8 +21,6 @@ public class HomingBullet : MonoBehaviour {
     bool follow = true;
 
     void Start() {
-        HUD = GameObject.Find("HUD");
-
         StopFollowing = false;
         m_Speed = m_MinSpeed;
         GetComponent<AudioSource>().Play();
@@ -95,9 +89,6 @@ public class HomingBullet : MonoBehaviour {
             print("Missle hit enemy");
             isColliding = true;
 
-            GameObject.Find("GameManager").GetComponent<PlayerScore>().AddScore(800);
-            ShowEarned(800, gameObject);
-
             GameObject HitExplosion = Instantiate(hitExplosion, gameObject.transform.position, gameObject.transform.rotation) as GameObject;
 
             GetComponent<MeshRenderer>().enabled = false;
@@ -110,23 +101,5 @@ public class HomingBullet : MonoBehaviour {
             Destroy(gameObject, GetComponent<AudioSource>().clip.length + 0.2f);
             Destroy(HitExplosion, HitExplosion.GetComponent<ParticleSystem>().duration);
         }
-    }
-
-    void ShowEarned(int earned, GameObject worldObject) {
-        EarnedTextObject = Instantiate(EarnedTextPrefab);
-        EarnedTextObject.transform.SetParent(HUD.transform);
-
-        Text earnedText = EarnedTextObject.GetComponent<Text>();
-        earnedText.color = Color.magenta;
-        earnedText.text = "+" + earned.ToString();
-
-        RectTransform CanvasRect = HUD.GetComponent<RectTransform>();
-
-        Vector2 ViewportPosition = Camera.main.WorldToViewportPoint(worldObject.transform.position);
-        Vector2 WorldObject_ScreenPosition = new Vector2(
-            ((ViewportPosition.x * CanvasRect.sizeDelta.x) - (CanvasRect.sizeDelta.x * 0.5f)),
-            ((ViewportPosition.y * CanvasRect.sizeDelta.y) - (CanvasRect.sizeDelta.y * 0.5f)));
-
-        EarnedTextObject.GetComponent<RectTransform>().anchoredPosition = WorldObject_ScreenPosition;
     }
 }

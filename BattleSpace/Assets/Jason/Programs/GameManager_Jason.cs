@@ -58,6 +58,11 @@ public class GameManager_Jason : MonoBehaviour {
 
         if(stopSpawn) {
             Shop.SetActive(true);
+            GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemies");
+            for(int i = 0; i < enemies.Length; i++) {
+                print("Destroyed enemy" + i.ToString());
+                Destroy(enemies[i]);
+            }
         }
 	}
 

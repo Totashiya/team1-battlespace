@@ -1347,14 +1347,16 @@ MonoBehaviour:
     and speed upgrades. Choose wisely which you will pick, as you can only get one
     upgrade at a time.\n\nGood luck!\n\tYour employers @ BATTLESPACE</size>\n\n--------END
     OF MESSAGE---------\n\n<size=30><b>TIPS</b>\n- Try not to stay in one spot for
-    too long, or you might get walled in by enemy fire.\n- Enemies are vulnerable
-    to their own attacks. Try leading their homing rockets back to them so they can
-    get a taste of their own medicine.\n- You can shoot rockets before they hit you,
-    and earn a small amount of points.\n- Hold down the fire button to shoot lasers
-    as fast as possible.\n- One way to defeat enemy ships is by simply running into
-    them. This isn't recommended however, since you get no points and lose 20 health.\n-
+    too long, or you might get cornered by enemy fire.\n- Enemies are vulnerable to
+    their own attacks. Try leading their homing rockets back to them so they can get
+    a taste of their own medicine.\n- You can shoot rockets before they hit you, and
+    earn a small amount of points.\n- Hold down the fire button to shoot lasers as
+    fast as possible.\n- One way to defeat enemy ships is by simply running into them.
+    This isn't recommended however, since you get no points and lose 20 health.\n-
     You will earn more points from destroying enemies that are closer to the bottom
-    of the screen. </size>"
+    of the screen.\n- Once the upgrade window opens, all enemies on screen will be
+    destroyed instantly. Since you get an upgrade every 8000 points you earn, you
+    can clear the screen by earning lots of points.</size>"
 --- !u!114 &114000012518825276
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1858,7 +1860,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 224000014151137778}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.25832224
+  m_Size: 0.21773289
   m_NumberOfSteps: 1
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2400,8 +2402,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0000038146973, y: -557}
-  m_SizeDelta: {x: 552, y: 1502}
+  m_AnchoredPosition: {x: 0.0000038146973, y: -697}
+  m_SizeDelta: {x: 552, y: 1782}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224000012619312448
 RectTransform:
@@ -2620,7 +2622,7 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 224000011890632990}
   m_RootOrder: 0
-  m_AnchorMin: {x: 0, y: 0.74167776}
+  m_AnchorMin: {x: 0, y: 0.7822671}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
