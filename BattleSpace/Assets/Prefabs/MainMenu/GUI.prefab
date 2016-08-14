@@ -371,7 +371,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1000013827227994
 GameObject:
   m_ObjectHideFlags: 1
@@ -1343,18 +1343,18 @@ MonoBehaviour:
     you can against the alien space force. While dodging their attacks, you will defend
     yourself by shooting them with lasers. From what we know, some of them shoot lasers
     like yours, while others shoot homing rockets. \n\nPeriodically, you will get
-    opportunities to upgrade your equipment. Possible upgrades include weapon upgrades
-    and speed upgrades. Choose wisely which you will pick, as you can only get one
-    upgrade at a time.\n\nGood luck!\n\tYour employers @ BATTLESPACE</size>\n\n--------END
-    OF MESSAGE---------\n\n<size=30><b>TIPS</b>\n- Try not to stay in one spot for
-    too long, or you might get walled in by enemy fire.\n- Enemies are vulnerable
-    to their own attacks. Try leading their homing rockets back to them so they can
-    get a taste of their own medicine.\n- You can shoot rockets before they hit you,
-    and earn a small amount of points.\n- Hold down the fire button to shoot lasers
-    as fast as possible.\n- One way to defeat enemy ships is by simply running into
-    them. This isn't recommended however, since you get no points and lose 20 health.\n-
-    You will earn more points from destroying enemies that are closer to the bottom
-    of the screen. </size>"
+    opportunities to upgrade your ship. During these upgrades, you can either increase
+    your ship's movement speed, or its firing rate. Choose wisely which you will pick,
+    as you can only get one upgrade at a time.\n\nGood luck out there!\n\tYour employers
+    @ BATTLESPACE</size>\n\n--------END OF MESSAGE---------\n\n<size=30><b>TIPS</b>\n-
+    Try not to stay in one spot for too long, or you might get walled in by enemy
+    fire.\n- Enemies are vulnerable to their own attacks. Try leading their homing
+    rockets back to them so they can get a taste of their own medicine.\n- You can
+    shoot rockets before they hit you, and earn a small amount of points.\n- Hold
+    down the fire button to shoot lasers as fast as possible.\n- One way to defeat
+    enemy ships is by simply running into them. This isn't recommended however, since
+    you get no points and lose 20 health.\n- You will earn more points from destroying
+    enemies that are closer to the bottom of the screen. </size>"
 --- !u!114 &114000012518825276
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1858,7 +1858,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 224000014151137778}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.25832224
+  m_Size: 0.25832227
   m_NumberOfSteps: 1
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2620,8 +2620,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 224000011890632990}
   m_RootOrder: 0
-  m_AnchorMin: {x: 0, y: 0.74167776}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
